@@ -1,0 +1,3464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CQCwidget</class>
+ <widget class="QWidget" name="CQCwidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1634</width>
+    <height>1137</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QStackedWidget" name="QC_mStacked">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="page_Map">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QTabWidget" name="mTab_QC">
+         <property name="styleSheet">
+          <string notr="true">
+QTabBar::tab {
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+min-width: 250px;
+max-width: 306px;
+padding: 18px;
+font-size: 28px;
+background-color:rgb(179, 179, 179);
+	color:white;
+margin-right: 20;
+}
+QTabWidget QTabBar
+{
+	font-size: 28px;
+}
+
+QTabBar::tab:selected{
+
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+min-width: 250px;
+max-width: 306px; 
+font-size: 28px;
+	background-color:rgb(34,70,120);
+color:white;
+
+	/*border: 2px solid #1B72BF; */   
+
+}</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <property name="elideMode">
+          <enum>Qt::ElideMiddle</enum>
+         </property>
+         <widget class="QWidget" name="mLayout_QC_Reagent">
+          <property name="styleSheet">
+           <string notr="true">QWidget
+{
+background-color: rgb(230, 230, 231);
+}</string>
+          </property>
+          <attribute name="title">
+           <string>试剂质控</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_9" stretch="0,1">
+           <item>
+            <widget class="QStackedWidget" name="mStackedWidget_QC">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>225</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>225</height>
+              </size>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="page_3">
+              <layout class="QVBoxLayout" name="verticalLayout_8">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QFrame" name="frame">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>225</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>225</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QFrame{
+	border-radius:12px;
+	background-color: rgb(34, 70, 120);
+}</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout">
+                  <property name="horizontalSpacing">
+                   <number>20</number>
+                  </property>
+                  <item row="3" column="1">
+                   <widget class="QLabel" name="mLab_SN">
+                    <property name="styleSheet">
+                     <string notr="true">QLabel
+{
+	color: rgb(255, 255, 255);
+	font-size:28px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>设备SN</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="2">
+                   <widget class="QLabel" name="mLab_Time">
+                    <property name="styleSheet">
+                     <string notr="true">QLabel
+{
+	color: rgb(255, 255, 255);
+	font-size:28px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>安装时间</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="mLab_Name">
+                    <property name="styleSheet">
+                     <string notr="true">QLabel
+{
+	color: rgb(255, 255, 255);
+	font-size:28px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>设备名称</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0" colspan="4">
+                   <widget class="QLabel" name="mLab_IDName">
+                    <property name="styleSheet">
+                     <string notr="true">QLabel
+{
+	color: rgb(255, 255, 255);
+	font-size:28px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>设备ID前缀</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0" colspan="4">
+                   <widget class="QLabel" name="label_39">
+                    <property name="styleSheet">
+                     <string notr="true">QLabel
+{
+	color: rgb(255, 255, 255);
+	font-size:28px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>设备信息</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="3">
+                   <spacer name="horizontalSpacer">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item row="1" column="0" colspan="4">
+                   <widget class="QLabel" name="mLab_Hospital">
+                    <property name="styleSheet">
+                     <string notr="true">QLabel
+{
+	color: rgb(255, 255, 255);
+	font-size:28px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>医院</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="page_4">
+              <layout class="QHBoxLayout" name="horizontalLayout_10">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QPushButton" name="mBtn_Clear_TestTable_3">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{ 
+	border-radius:8px;
+	background-color:rgb(31, 78, 121);
+	font-size:26px; 
+	color:white;
+}
+QPushButton:hover{
+	font-size:26px; 
+	color:white;	
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+                 </property>
+                 <property name="text">
+                  <string>NT-
+ProBNP
+
+180</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoRepeat">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="mBtn_Clear_TestTable_23">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{ 
+	border-radius:8px;
+	background-color:rgb(107, 203, 96);
+	font-size:23px; 
+	color: rgb(64, 64, 64);
+}
+QPushButton:hover{
+	font-size:23px; 
+	color:black;	
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+                 </property>
+                 <property name="text">
+                  <string>NT-
+ProBNP
+
+180</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoRepeat">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="mBtn_Clear_TestTable_17">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{ 
+	border-radius:8px;
+	background-color:rgb(205,206,214);
+	font-size:26px; 
+	color:black;
+}
+QPushButton:hover{
+	font-size:26px; 
+	color:black;	
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+                 </property>
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoRepeat">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="mBtn_Clear_TestTable_19">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{ 
+	border-radius:8px;
+	background-color:rgb(205,206,214);
+	font-size:26px; 
+	color:black;
+}
+QPushButton:hover{
+	font-size:26px; 
+	color:black;	
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+                 </property>
+                 <property name="text">
+                  <string>4</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoRepeat">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="mBtn_Clear_TestTable_18">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{ 
+	border-radius:8px;
+	background-color:rgb(205,206,214);
+	font-size:26px; 
+	color:black;
+}
+QPushButton:hover{
+	font-size:26px; 
+	color:black;	
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+                 </property>
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoRepeat">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="mBtn_Clear_TestTable_25">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{ 
+	border-radius:8px;
+	background-color:rgb(205,206,214);
+	font-size:26px; 
+	color:black;
+}
+QPushButton:hover{
+	font-size:26px; 
+	color:black;	
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+                 </property>
+                 <property name="text">
+                  <string>6</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoRepeat">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="mBtn_Clear_TestTable_22">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{ 
+	border-radius:8px;
+	background-color:rgb(205,206,214);
+	font-size:26px; 
+	color:black;
+}
+QPushButton:hover{
+	font-size:26px; 
+	color:black;	
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+                 </property>
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoRepeat">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="mBtn_Clear_TestTable_15">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{ 
+	border-radius:8px;
+	background-color:rgb(205,206,214);
+	font-size:26px; 
+	color:black;
+}
+QPushButton:hover{
+	font-size:26px; 
+	color:black;	
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+                 </property>
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoRepeat">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="mBtn_Clear_TestTable_20">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{ 
+	border-radius:8px;
+	background-color:rgb(205,206,214);
+	font-size:26px; 
+	color:black;
+}
+QPushButton:hover{
+	font-size:26px; 
+	color:black;	
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+                 </property>
+                 <property name="text">
+                  <string>9</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoRepeat">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="mBtn_Clear_TestTable_21">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{ 
+	border-radius:8px;
+	background-color:rgb(205,206,214);
+	font-size:26px; 
+	color:black;
+}
+QPushButton:hover{
+	font-size:26px; 
+	color:black;	
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+                 </property>
+                 <property name="text">
+                  <string>10</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoRepeat">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="mBtn_Clear_TestTable_24">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{ 
+	border-radius:8px;
+	background-color:rgb(205,206,214);
+	font-size:26px; 
+	color:black;
+}
+QPushButton:hover{
+	font-size:26px; 
+	color:black;	
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+                 </property>
+                 <property name="text">
+                  <string>11</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoRepeat">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="mBtn_Clear_TestTable_16">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{ 
+	border-radius:8px;
+	background-color:rgb(205,206,214);
+	font-size:26px; 
+	color:black;
+}
+QPushButton:hover{
+	font-size:26px; 
+	color:black;	
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+                 </property>
+                 <property name="text">
+                  <string>12</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoRepeat">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <layout class="QGridLayout" name="gridLayout_3" rowstretch="0,0,0,1,1,1,1,0" columnstretch="13,2">
+             <property name="horizontalSpacing">
+              <number>10</number>
+             </property>
+             <item row="5" column="1">
+              <widget class="QStackedWidget" name="mStacked_QC_Operation">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>80</height>
+                </size>
+               </property>
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <widget class="QWidget" name="page_5">
+                <layout class="QHBoxLayout" name="horizontalLayout_4">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="mBtn_QC_Operation">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>80</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>-1</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(34,70,120);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(241, 129,1);
+};
+</string>
+                   </property>
+                   <property name="text">
+                    <string>开始质控</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="page_6">
+                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_52">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>80</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLabel{
+border-radius:8px;
+background-color:rgb(130,130,130);
+font-size:26px; 
+color:white;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>等待检验</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+             <item row="3" column="0" rowspan="5">
+              <widget class="QTableWidget" name="mTable_QC_Inquire">
+               <property name="styleSheet">
+                <string notr="true">QTableWidget  QHeaderView::section
+{
+
+	background-color:rgb(34,70,120);
+border:none;  
+height:42px; 
+color:rgb(255, 255, 255);
+font-size:28px;
+}
+QTableWidget
+{
+background:rgb(243,244,248);
+gridline-color:rgb(200,200,205);
+font-size:28px; 
+color:black; 
+border:none;
+border-bottom-right-radius:8px;
+border-bottom-left-radius:8px;
+}
+
+QHeaderView::section:first{
+border-top-left-radius:8px;
+}
+QHeaderView::section:last{
+border-top-right-radius:8px;
+}
+
+/*  设置垂直滚动条基本样式*/
+QScrollBar:vertical
+{
+    width:8px;
+	background-color: rgb(233, 236, 245);
+    margin:00px,0px,0px,0px;
+    padding-top:15px;   /* 留出9px给上面和下面的箭头*/
+    padding-bottom:5px;
+}
+QScrollBar::handle:vertical
+{
+    width:8px;
+    background:rgba(64,64,64,50%);
+	border-bottom-right-radius:8px;
+	border-top-right-radius:8px;
+    min-height:0;
+}
+QScrollBar::handle:vertical:hover
+{
+    width:8px;
+    background:rgba(64,64,64,70%);   /*  鼠标放到滚动条上的时候，颜色变深*/
+	border-bottom-right-radius:8px;
+	border-top-right-radius:8px;
+    min-height:0;
+}
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical   /* 当滚动条滚动的时候，上面的部分和下面的部分*/
+{
+    background:rgba(0,0,0,0%);
+    border-radius:4px;
+}
+QScrollBar::add-line:vertical
+{
+    height: 0px;
+    subcontrol-origin:margin;
+}
+
+QScrollBar::up-arrow:vertical 
+{
+    subcontrol-origin: margin;
+    height: 0px;
+    border:0 0 0 0;
+    border-image: url(:images/6.png);
+}
+QScrollBar::sub-line:vertical 
+{
+    height: 0px;
+    subcontrol-origin:margin;
+}
+
+QScrollBar::down-arrow:vertical 
+{
+    subcontrol-origin: margin;
+    height: 0px;
+    border-image: url(:images/7.png);
+}</string>
+               </property>
+               <property name="inputMethodHints">
+                <set>Qt::ImhNone</set>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::SingleSelection</enum>
+               </property>
+               <property name="selectionBehavior">
+                <enum>QAbstractItemView::SelectRows</enum>
+               </property>
+               <property name="textElideMode">
+                <enum>Qt::ElideMiddle</enum>
+               </property>
+               <property name="verticalScrollMode">
+                <enum>QAbstractItemView::ScrollPerPixel</enum>
+               </property>
+               <property name="horizontalScrollMode">
+                <enum>QAbstractItemView::ScrollPerPixel</enum>
+               </property>
+               <attribute name="horizontalHeaderVisible">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="horizontalHeaderDefaultSectionSize">
+                <number>165</number>
+               </attribute>
+               <attribute name="horizontalHeaderHighlightSections">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="horizontalHeaderStretchLastSection">
+                <bool>true</bool>
+               </attribute>
+               <attribute name="verticalHeaderVisible">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="verticalHeaderDefaultSectionSize">
+                <number>51</number>
+               </attribute>
+               <column>
+                <property name="text">
+                 <string>序号</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>项目</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>批号</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>水平</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>靶值</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>SD</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>检测值</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>时间</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QPushButton" name="mBtn_QC_Open">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>80</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(34,70,120);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(241,129,1);
+};
+</string>
+               </property>
+               <property name="text">
+                <string>出仓</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="1">
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="4" column="1">
+              <widget class="QPushButton" name="mBtn_QC_Inquire">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>80</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(34,70,120);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(241,129,1);
+};
+</string>
+               </property>
+               <property name="text">
+                <string>质控跟踪</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QPushButton" name="mBtn_QC_SetInfo">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>80</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(34,70,120);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(241, 129,1);
+};
+</string>
+               </property>
+               <property name="text">
+                <string>参数设置</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0" colspan="2">
+              <widget class="QLabel" name="mLab_QC_">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel
+{
+	color: black;
+	font-size:28px;
+}</string>
+               </property>
+               <property name="text">
+                <string>试剂质控列表</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0" colspan="2">
+              <widget class="QFrame" name="mframe_state">
+               <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0,0,0,0,0,0,0,0,0">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_36">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+	color: black;
+	font-size:28px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>试剂质控状态：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_38">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+background-color: rgb(0, 128, 0);
+	color: black;
+	font-size:28px;
+	border-radius:8px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_40">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+	color: black;
+	font-size:28px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>在控</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_43">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+background-color:rgb(31, 78, 121);
+	font-size:28px;
+	border-radius:8px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_44">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+	color: black;
+	font-size:28px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>已审核</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_51">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+background-color:rgb(130,130,130);
+	font-size:28px;
+	border-radius:8px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_50">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+	color: black;
+	font-size:28px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>过期</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_42">
+                  <property name="minimumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+background-color:rgb(228,122,10);
+	font-size:28px;
+	border-radius:8px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_41">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+	color: black;
+	font-size:28px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>脱靶</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="1" column="0" colspan="2">
+              <widget class="QFrame" name="mframe_Batch">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>131</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>131</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">#mframe_Batch
+{
+	background-color: rgb(255, 255, 255);
+}</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>2</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>2</number>
+                </property>
+                <item>
+                 <widget class="QTableWidget" name="mTable_QC_Batch">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>125</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>125</height>
+                   </size>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QTableWidget  QHeaderView::section
+{
+
+	background-color:rgb(130, 130, 130);
+border:1px solid #ffffff;  
+height:42px; 
+width:80px;
+color:rgb(255, 255, 255);
+font-size:26px;
+}
+QTableWidget
+{
+background-color: rgb(230, 230, 231);
+gridline-color:white;
+font-size:26px; 
+color:black; 
+border:none;
+}
+QHeaderView::section{
+            border-top:2px solid #E5E5E5;
+            border-left:2px solid #E5E5E5;
+            border-right:0.5px solid #E5E5E5;
+            border-bottom: 0.5px solid #E5E5E5;
+            background-color:white;
+            padding:4px;
+}
+/*水平滚动条*/
+QScrollBar:horizontal {
+	background-color: rgb(210, 210, 210);
+      height: 10px;
+      margin: 0px 0px 0 0px;
+  }
+  QScrollBar::handle:horizontal {
+      background: rgb(64, 64, 64,50%);
+	border-bottom-left-radius:8px;
+	border-bottom-right-radius:8px;
+      min-width: 0px;
+  }
+
+QScrollBar::handle:horizontal:hover
+{
+    width:8px;
+    background:rgba(64,64,64,70%);   /*  鼠标放到滚动条上的时候，颜色变深*/
+	border-bottom-left-radius:8px;
+	border-bottom-right-radius:8px;
+    min-height:0;
+}
+  QScrollBar::add-line:horizontal {
+      width: 0px;
+      subcontrol-position: right;
+      subcontrol-origin: margin;
+  }
+
+  QScrollBar::sub-line:horizontal {
+      width: 0px;
+      subcontrol-position: left;
+      subcontrol-origin: margin;
+  }
+ QScrollBar:left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+      border: 2px solid grey;
+      width: 3px;
+      height: 3px;
+      background: white;
+  }
+
+  QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+      background: none;
+  }
+
+</string>
+                  </property>
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhNone</set>
+                  </property>
+                  <property name="editTriggers">
+                   <set>QAbstractItemView::NoEditTriggers</set>
+                  </property>
+                  <property name="selectionMode">
+                   <enum>QAbstractItemView::SingleSelection</enum>
+                  </property>
+                  <property name="selectionBehavior">
+                   <enum>QAbstractItemView::SelectColumns</enum>
+                  </property>
+                  <property name="textElideMode">
+                   <enum>Qt::ElideMiddle</enum>
+                  </property>
+                  <property name="verticalScrollMode">
+                   <enum>QAbstractItemView::ScrollPerPixel</enum>
+                  </property>
+                  <property name="horizontalScrollMode">
+                   <enum>QAbstractItemView::ScrollPerPixel</enum>
+                  </property>
+                  <attribute name="horizontalHeaderVisible">
+                   <bool>false</bool>
+                  </attribute>
+                  <attribute name="horizontalHeaderCascadingSectionResizes">
+                   <bool>false</bool>
+                  </attribute>
+                  <attribute name="horizontalHeaderDefaultSectionSize">
+                   <number>200</number>
+                  </attribute>
+                  <attribute name="horizontalHeaderHighlightSections">
+                   <bool>true</bool>
+                  </attribute>
+                  <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                   <bool>false</bool>
+                  </attribute>
+                  <attribute name="horizontalHeaderStretchLastSection">
+                   <bool>false</bool>
+                  </attribute>
+                  <attribute name="verticalHeaderVisible">
+                   <bool>false</bool>
+                  </attribute>
+                  <attribute name="verticalHeaderDefaultSectionSize">
+                   <number>55</number>
+                  </attribute>
+                  <row>
+                   <property name="text">
+                    <string>批号</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>状态</string>
+                   </property>
+                  </row>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QTabWidget" name="tabWidget_3">
+         <property name="styleSheet">
+          <string notr="true">
+QTabBar::tab {
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+min-width: 250px;
+max-width: 306px;
+padding: 25px;
+font-size: 28px;
+background-color:rgb(179, 179, 179);
+	color:white;
+margin-right: 20;
+}
+QTabWidget QTabBar
+{
+	font-size: 28px;
+}
+
+QTabBar::tab:selected{
+
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+min-width: 250px;
+max-width: 306px;
+padding: 15px;
+font-size: 28px;
+	background-color:rgb(34,70,120);
+color:white;
+
+	/*border: 2px solid #1B72BF; */   
+
+}</string>
+         </property>
+         <widget class="QWidget" name="qwe_QC_Detail">
+          <property name="styleSheet">
+           <string notr="true">qwe_QC_Detail
+{
+
+}</string>
+          </property>
+          <attribute name="title">
+           <string>质控跟踪</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_4" rowstretch="3,0,1,3" columnstretch="0,1,5,1">
+           <item row="3" column="0">
+            <widget class="QLabel" name="mLab_stateColos_2">
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>360</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel
+{
+	background-color:rgb(34,70,120);
+font-size:32px; 
+color:white;
+}</string>
+             </property>
+             <property name="text">
+              <string notr="true">质
+控
+详
+情
+列
+表</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QCustomPlot" name="mCustom_QC" native="true">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3" rowspan="3">
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="mBtn_Detail_Retun">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(34,70,120);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(241,129,1);
+};
+</string>
+               </property>
+               <property name="text">
+                <string>返回</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="mBtn_Detail_Delete">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(34,70,120);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(241,129,1);
+};
+</string>
+               </property>
+               <property name="text">
+                <string>删除</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="mBtn_Detail_Inquire">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>140</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(34,70,120);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(241,129,1);
+};
+</string>
+               </property>
+               <property name="text">
+                <string>查询</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="mBtn_Detail_Check">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(34,70,120);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(241,129,1);
+};
+</string>
+               </property>
+               <property name="text">
+                <string>审核</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="mBtn_Detail_Print">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(34,70,120);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(241,129,1);
+};
+</string>
+               </property>
+               <property name="text">
+                <string>打印</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="2" column="2">
+            <widget class="QTableWidget" name="mTable_Detail_Value">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QTableWidget  QHeaderView::section
+{
+
+	background-color:rgb(130, 130, 130);
+border:none;  
+height:42px; 
+color:rgb(255, 255, 255);
+font-size:28px;
+}
+QTableWidget
+{
+background:rgb(243,244,248);
+gridline-color:rgb(200,200,205);
+font-size:28px; 
+color:black; 
+border:none;
+border-bottom-right-radius:8px;
+border-bottom-left-radius:8px;
+}
+
+QHeaderView::section:first{
+border-top-left-radius:8px;
+}
+QHeaderView::section:last{
+border-top-right-radius:8px;
+}</string>
+             </property>
+             <property name="inputMethodHints">
+              <set>Qt::ImhNone</set>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <property name="textElideMode">
+              <enum>Qt::ElideMiddle</enum>
+             </property>
+             <property name="verticalScrollMode">
+              <enum>QAbstractItemView::ScrollPerPixel</enum>
+             </property>
+             <property name="horizontalScrollMode">
+              <enum>QAbstractItemView::ScrollPerPixel</enum>
+             </property>
+             <attribute name="horizontalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="horizontalHeaderDefaultSectionSize">
+              <number>200</number>
+             </attribute>
+             <attribute name="horizontalHeaderHighlightSections">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="horizontalHeaderStretchLastSection">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderDefaultSectionSize">
+              <number>50</number>
+             </attribute>
+             <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderStretchLastSection">
+              <bool>true</bool>
+             </attribute>
+             <row>
+              <property name="text">
+               <string>新建行</string>
+              </property>
+             </row>
+             <column>
+              <property name="text">
+               <string>质控总数</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>在控数(%)</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>脱靶数(%)</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>脱靶处理</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item row="0" column="0" rowspan="3" colspan="2">
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <property name="bottomMargin">
+              <number>30</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_61">
+               <property name="styleSheet">
+                <string notr="true">QLabel
+{
+	color: rgb(137, 137, 137);
+	font-size:28px;
+}</string>
+               </property>
+               <property name="text">
+                <string>项目名称</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="mCom_Detail_Project">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>55</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+/*未下拉时，QComboBox 样式 背景黑色*/
+QComboBox {
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;    
+background:#ffffff;
+color:#565656;
+font-size:28px;
+}  
+
+/*下拉后的整个下拉窗体样式 背景红色*/
+QComboBox QAbstractItemView 
+{
+	background:#ffffff;
+	color:#565656;  
+} 
+ 
+/*下拉箭头区域样式*/
+QComboBox::drop-down
+{
+width: 40px;
+border-left: 2px solid #e1e3e7; 
+}    
+
+/*下拉箭头样式*/
+QComboBox::down-arrow {
+	image: url(:/image/images/arrow.png);
+height:20px;
+width:37px;
+}     
+QComboBox:editable {
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;    
+background:#ffffff;
+color:#565656;
+font-size:28px;
+}</string>
+               </property>
+               <property name="editable">
+                <bool>false</bool>
+               </property>
+               <property name="duplicatesEnabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_62">
+               <property name="styleSheet">
+                <string notr="true">QLabel
+{
+	color: rgb(137, 137, 137);
+	font-size:28px;
+}</string>
+               </property>
+               <property name="text">
+                <string>水平</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="mCom_Detail_Level">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>55</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+/*未下拉时，QComboBox 样式 背景黑色*/
+QComboBox {
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;    
+background:#ffffff;
+color:#565656;
+font-size:28px;
+}  
+
+/*下拉后的整个下拉窗体样式 背景红色*/
+QComboBox QAbstractItemView 
+{
+	background:#ffffff;
+	color:#565656;  
+} 
+ 
+/*下拉箭头区域样式*/
+QComboBox::drop-down
+{
+width: 40px;
+border-left: 2px solid #e1e3e7; 
+}    
+
+/*下拉箭头样式*/
+QComboBox::down-arrow {
+	image: url(:/image/images/arrow.png);
+height:20px;
+width:37px;
+}     
+QComboBox:editable {
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;    
+background:#ffffff;
+color:#565656;
+font-size:28px;
+}</string>
+               </property>
+               <property name="editable">
+                <bool>false</bool>
+               </property>
+               <property name="currentText">
+                <string notr="true">1</string>
+               </property>
+               <property name="duplicatesEnabled">
+                <bool>false</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>1</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>2</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_59">
+               <property name="styleSheet">
+                <string notr="true">QLabel
+{
+	color: rgb(137, 137, 137);
+	font-size:28px;
+}</string>
+               </property>
+               <property name="text">
+                <string>质控批号</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="mCom_Detail_Batch">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>55</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+/*未下拉时，QComboBox 样式 背景黑色*/
+QComboBox {
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;    
+background:#ffffff;
+color:#565656;
+font-size:28px;
+}  
+
+/*下拉后的整个下拉窗体样式 背景红色*/
+QComboBox QAbstractItemView 
+{
+	background:#ffffff;
+	color:#565656;  
+} 
+ 
+/*下拉箭头区域样式*/
+QComboBox::drop-down
+{
+width: 40px;
+border-left: 2px solid #e1e3e7; 
+}    
+
+/*下拉箭头样式*/
+QComboBox::down-arrow {
+	image: url(:/image/images/arrow.png);
+height:20px;
+width:37px;
+}     
+QComboBox:editable {
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;    
+background:#ffffff;
+color:#565656;
+font-size:28px;
+}</string>
+               </property>
+               <property name="editable">
+                <bool>false</bool>
+               </property>
+               <property name="duplicatesEnabled">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_45">
+               <property name="styleSheet">
+                <string notr="true">QLabel
+{
+	color: rgb(137, 137, 137);
+	font-size:28px;
+}</string>
+               </property>
+               <property name="text">
+                <string>时间（月）</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="mEdit_Detail_Time">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>55</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLineEdit
+{
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;
+	font-size:28px;
+	color:#565656;
+	background-color: rgb(255, 255, 255);
+}</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_63">
+             <property name="styleSheet">
+              <string notr="true">QLabel
+{
+	color: rgb(137, 137, 137);
+	font-size:28px;
+}</string>
+             </property>
+             <property name="text">
+              <string>数据统计</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1" colspan="3">
+            <widget class="QTableWidget" name="mTable_Detail_Data">
+             <property name="styleSheet">
+              <string notr="true">QTableWidget  QHeaderView::section
+{
+
+	background-color:rgb(130, 130, 130);
+border:none;  
+height:42px; 
+color:rgb(255, 255, 255);
+font-size:28px;
+}
+QTableWidget
+{
+background:rgb(243,244,248);
+gridline-color:rgb(200,200,205);
+font-size:28px; 
+color:black; 
+border:none;
+border-bottom-right-radius:8px;
+border-bottom-left-radius:8px;
+}
+
+QHeaderView::section:first{
+border-top-left-radius:8px;
+}
+QHeaderView::section:last{
+border-top-right-radius:8px;
+}
+
+/*  设置垂直滚动条基本样式*/
+QScrollBar:vertical
+{
+    width:8px;
+	background-color: rgb(233, 236, 245);
+    margin:00px,0px,0px,0px;
+    padding-top:15px;   /* 留出9px给上面和下面的箭头*/
+    padding-bottom:5px;
+}
+QScrollBar::handle:vertical
+{
+    width:8px;
+    background:rgba(64,64,64,50%);
+	border-bottom-right-radius:8px;
+	border-top-right-radius:8px;
+    min-height:0;
+}
+QScrollBar::handle:vertical:hover
+{
+    width:8px;
+    background:rgba(64,64,64,70%);   /*  鼠标放到滚动条上的时候，颜色变深*/
+	border-bottom-right-radius:8px;
+	border-top-right-radius:8px;
+    min-height:0;
+}
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical   /* 当滚动条滚动的时候，上面的部分和下面的部分*/
+{
+    background:rgba(0,0,0,0%);
+    border-radius:4px;
+}
+QScrollBar::add-line:vertical
+{
+    height: 0px;
+    subcontrol-origin:margin;
+}
+
+QScrollBar::up-arrow:vertical 
+{
+    subcontrol-origin: margin;
+    height: 0px;
+    border:0 0 0 0;
+    border-image: url(:images/6.png);
+}
+QScrollBar::sub-line:vertical 
+{
+    height: 0px;
+    subcontrol-origin:margin;
+}
+
+QScrollBar::down-arrow:vertical 
+{
+    subcontrol-origin: margin;
+    height: 0px;
+    border-image: url(:images/7.png);
+}</string>
+             </property>
+             <property name="inputMethodHints">
+              <set>Qt::ImhNone</set>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SingleSelection</enum>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <property name="textElideMode">
+              <enum>Qt::ElideMiddle</enum>
+             </property>
+             <property name="verticalScrollMode">
+              <enum>QAbstractItemView::ScrollPerPixel</enum>
+             </property>
+             <property name="horizontalScrollMode">
+              <enum>QAbstractItemView::ScrollPerPixel</enum>
+             </property>
+             <attribute name="horizontalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="horizontalHeaderDefaultSectionSize">
+              <number>160</number>
+             </attribute>
+             <attribute name="horizontalHeaderHighlightSections">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="horizontalHeaderStretchLastSection">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderDefaultSectionSize">
+              <number>50</number>
+             </attribute>
+             <row>
+              <property name="text">
+               <string>新建行</string>
+              </property>
+             </row>
+             <column>
+              <property name="text">
+               <string>序号</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>测试值</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>靶值</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>SD</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>偏差</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>状态</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>样本类型</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>操作员</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>审核员</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>时间</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>状态</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QTabWidget" name="tabWidget_4">
+         <property name="styleSheet">
+          <string notr="true">
+QTabBar::tab {
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+min-width: 250px;
+max-width: 306px;
+padding: 25px;
+font-size: 28px;
+background-color:rgb(179, 179, 179);
+	color:white;
+margin-right: 20;
+}
+QTabWidget QTabBar
+{
+	font-size: 28px;
+}
+
+QTabBar::tab:selected{
+
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+min-width: 250px;
+max-width: 306px;
+padding: 15px;
+font-size: 28px;
+	background-color:rgb(64,64,64);
+color:white;
+
+	/*border: 2px solid #1B72BF; */   
+
+}</string>
+         </property>
+         <widget class="QWidget" name="data_qc">
+          <property name="styleSheet">
+           <string notr="true">#data_qc
+{
+background-color: rgb(230, 230, 231);
+}</string>
+          </property>
+          <attribute name="title">
+           <string>参数设置</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_48">
+             <property name="styleSheet">
+              <string notr="true">QLabel
+{
+	color: 565656;
+	font-size:28px;
+}</string>
+             </property>
+             <property name="text">
+              <string>质控品项目</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="mEdit_Data_Project">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>55</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit
+{
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;
+	font-size:28px;
+	color: #565656;
+	background-color: rgb(255, 255, 255);
+
+
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_46">
+             <property name="styleSheet">
+              <string notr="true">QLabel
+{
+	color: 565656;
+	font-size:28px;
+}</string>
+             </property>
+             <property name="text">
+              <string>质控品批号</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLineEdit" name="mEdit_Data_Batch">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>55</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit
+{
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;
+	font-size:28px;
+	color: #565656;
+	background-color: rgb(255, 255, 255);
+
+
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="mBtn_Data_Retun">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>55</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>-1</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(64,64,64);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+             </property>
+             <property name="text">
+              <string>返回</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_57">
+             <property name="styleSheet">
+              <string notr="true">QLabel
+{
+	color: 565656;
+	font-size:28px;
+}</string>
+             </property>
+             <property name="text">
+              <string>质控品单位</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="mEdit_Data_Unit">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>55</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit
+{
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;
+	font-size:28px;
+	color: #565656;
+	background-color: rgb(255, 255, 255);
+
+
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_49">
+             <property name="styleSheet">
+              <string notr="true">QLabel
+{
+	color: 565656;
+	font-size:28px;
+}</string>
+             </property>
+             <property name="text">
+              <string>质控品靶值</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLineEdit" name="mEdit_Data_TargetValue">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>55</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit
+{
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;
+	font-size:28px;
+	color: #565656;
+	background-color: rgb(255, 255, 255);
+
+
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="mBtn_Data_save">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>55</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>-1</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(64,64,64);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+             </property>
+             <property name="text">
+              <string>添加</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_47">
+             <property name="styleSheet">
+              <string notr="true">QLabel
+{
+	color: 565656;
+	font-size:28px;
+}</string>
+             </property>
+             <property name="text">
+              <string>质控品水平</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="mCom_Data_Level">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>55</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+/*未下拉时，QComboBox 样式 背景黑色*/
+QComboBox {
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;    
+background:#ffffff;
+color:#565656;
+font-size:28px;
+}  
+
+/*下拉后的整个下拉窗体样式 背景红色*/
+QComboBox QAbstractItemView 
+{
+	background:#ffffff;
+	color:#565656;  
+} 
+ 
+/*下拉箭头区域样式*/
+QComboBox::drop-down
+{
+width: 40px;
+border-left: 2px solid #e1e3e7; 
+}    
+
+/*下拉箭头样式*/
+QComboBox::down-arrow {
+	image: url(:/image/images/arrow.png);
+height:20px;
+width:37px;
+}     
+QComboBox:editable {
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;    
+background:#ffffff;
+color:#565656;
+font-size:28px;
+}</string>
+             </property>
+             <property name="editable">
+              <bool>false</bool>
+             </property>
+             <property name="duplicatesEnabled">
+              <bool>false</bool>
+             </property>
+             <item>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>2</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>3</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="label_58">
+             <property name="styleSheet">
+              <string notr="true">QLabel
+{
+	color: 565656;
+	font-size:28px;
+}</string>
+             </property>
+             <property name="text">
+              <string>质控品SD值</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLineEdit" name="mEdit_Data_SD">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>55</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit
+{
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;
+	font-size:28px;
+	color: #565656;
+	background-color: rgb(255, 255, 255);
+
+
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="QPushButton" name="mBtn_Data_delete">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>55</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>99999</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>-1</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(64,64,64);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+             </property>
+             <property name="text">
+              <string>删除</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="5">
+            <widget class="QTableWidget" name="mTable_Data">
+             <property name="styleSheet">
+              <string notr="true">QTableWidget  QHeaderView::section
+{
+
+	background-color:rgb(130, 130, 130);
+border:none;  
+height:42px; 
+color:rgb(255, 255, 255);
+font-size:28px;
+}
+QTableWidget
+{
+background:rgb(243,244,248);
+gridline-color:rgb(200,200,205);
+font-size:28px; 
+color:black; 
+border:none;
+border-bottom-right-radius:8px;
+border-bottom-left-radius:8px;
+}
+
+QHeaderView::section:first{
+border-top-left-radius:8px;
+}
+QHeaderView::section:last{
+border-top-right-radius:8px;
+}
+
+/*  设置垂直滚动条基本样式*/
+QScrollBar:vertical
+{
+    width:8px;
+	background-color: rgb(233, 236, 245);
+    margin:00px,0px,0px,0px;
+    padding-top:15px;   /* 留出9px给上面和下面的箭头*/
+    padding-bottom:5px;
+}
+QScrollBar::handle:vertical
+{
+    width:8px;
+    background:rgba(64,64,64,50%);
+	border-bottom-right-radius:8px;
+	border-top-right-radius:8px;
+    min-height:0;
+}
+QScrollBar::handle:vertical:hover
+{
+    width:8px;
+    background:rgba(64,64,64,70%);   /*  鼠标放到滚动条上的时候，颜色变深*/
+	border-bottom-right-radius:8px;
+	border-top-right-radius:8px;
+    min-height:0;
+}
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical   /* 当滚动条滚动的时候，上面的部分和下面的部分*/
+{
+    background:rgba(0,0,0,0%);
+    border-radius:4px;
+}
+QScrollBar::add-line:vertical
+{
+    height: 0px;
+    subcontrol-origin:margin;
+}
+
+QScrollBar::up-arrow:vertical 
+{
+    subcontrol-origin: margin;
+    height: 0px;
+    border:0 0 0 0;
+    border-image: url(:images/6.png);
+}
+QScrollBar::sub-line:vertical 
+{
+    height: 0px;
+    subcontrol-origin:margin;
+}
+
+QScrollBar::down-arrow:vertical 
+{
+    subcontrol-origin: margin;
+    height: 0px;
+    border-image: url(:images/7.png);
+}</string>
+             </property>
+             <property name="inputMethodHints">
+              <set>Qt::ImhNone</set>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <property name="textElideMode">
+              <enum>Qt::ElideMiddle</enum>
+             </property>
+             <property name="verticalScrollMode">
+              <enum>QAbstractItemView::ScrollPerPixel</enum>
+             </property>
+             <property name="horizontalScrollMode">
+              <enum>QAbstractItemView::ScrollPerPixel</enum>
+             </property>
+             <attribute name="horizontalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="horizontalHeaderDefaultSectionSize">
+              <number>195</number>
+             </attribute>
+             <attribute name="horizontalHeaderHighlightSections">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="horizontalHeaderStretchLastSection">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderDefaultSectionSize">
+              <number>50</number>
+             </attribute>
+             <column>
+              <property name="text">
+               <string>选择</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>序号</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>项目</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>批号</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>水平</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>靶值</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>SD值</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>单位</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,66 @@
+<RCC>
+    <qresource prefix="/qss">
+        <file>generalinstsoft.qss</file>
+    </qresource>
+    <qresource prefix="/"/>
+    <qresource prefix="/font">
+        <file>font/Alibaba-PuHuiTi-Medium.otf</file>
+    </qresource>
+    <qresource prefix="/image">
+        <file>images/icon-运行/Default.png</file>
+        <file>images/icon-质控查询/Hover.png</file>
+        <file>images/seletbox/Hover.png</file>
+        <file>images/icon-质控查询/Default.png</file>
+        <file>images/seletbox/Default.png</file>
+        <file>images/icon-维护/Hover.png</file>
+        <file>images/icon-运行/Hover.png</file>
+        <file>images/icon-质控/Hover.png</file>
+        <file>images/icon-设置/Default.png</file>
+        <file>images/icon-维护/Default.png</file>
+        <file>images/icon-质控/Default.png</file>
+        <file>images/icon-设置/Hover.png</file>
+        <file>images/icon-确定/Default.png</file>
+        <file>images/icon-检验人员-删除/Hover.png</file>
+        <file>images/icon-清空/Hover.png</file>
+        <file>images/icon-确定/Hover.png</file>
+        <file>images/icon-测试/Default.png</file>
+        <file>images/icon-清空/Default.png</file>
+        <file>images/icon-测试/Hover.png</file>
+        <file>images/icon-检验人员-添加/Hover.png</file>
+        <file>images/icon-查看校准图/Default.png</file>
+        <file>images/icon-检验人员-删除/Default.png</file>
+        <file>images/icon-检验人员-添加/Default.png</file>
+        <file>images/icon-校准/Default.png</file>
+        <file>images/icon-查看校准图/Hover.png</file>
+        <file>images/icon-校准/Hover.png</file>
+        <file>images/icon-查看曲线图/Default.png</file>
+        <file>images/icon-查看曲线图/Hover.png</file>
+        <file>images/icon-打印报告/Default.png</file>
+        <file>images/icon-打印报告/Hover.png</file>
+        <file>images/icon-应用/Hover.png</file>
+        <file>images/icon-历史/Default.png</file>
+        <file>images/icon-应用/Default.png</file>
+        <file>images/icon-增加用户/Default.png</file>
+        <file>images/icon-增加用户-修改/Default.png</file>
+        <file>images/icon-历史/Hover.png</file>
+        <file>images/icon-增加用户/Hover.png</file>
+        <file>images/icon-增加用户-修改/Hover.png</file>
+        <file>images/icon-修改信息/Default.png</file>
+        <file>images/icon-修改信息/Hover.png</file>
+        <file>images/icon-关机/Default.png</file>
+        <file>images/icon-关机/Hover.png</file>
+        <file>images/logo.png</file>
+        <file>images/checkoff.png</file>
+        <file>images/checkon.png</file>
+        <file>images/arrow.png</file>
+        <file>images/print.png</file>
+        <file>images/icon-pass.png</file>
+        <file>images/icon-user.png</file>
+        <file>images/CLi1600.png</file>
+        <file>images/language/CN.png</file>
+        <file>images/language/EN.png</file>
+        <file>images/CLi-M300.png</file>
+        <file>images/bottle.png</file>
+        <file>images/bottle2.png</file>
+    </qresource>
+</RCC>

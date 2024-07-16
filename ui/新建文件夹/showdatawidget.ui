@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ShowDataWidget</class>
+ <widget class="QWidget" name="ShowDataWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1014</width>
+    <height>751</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,0,1,1" columnstretch="0,3,0">
+   <item row="0" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="Show_lab_num">
+       <property name="minimumSize">
+        <size>
+         <width>35</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel
+{
+    background-color:rgb(64,64,64);
+	font-size:23px;
+	color:white;
+border-radius:6px;
+}</string>
+       </property>
+       <property name="text">
+        <string>患者信息 测试流水号：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <layout class="QGridLayout" name="gridLayout" rowstretch="5,1" columnstretch="1,1,1">
+     <item row="0" column="0" rowspan="2">
+      <widget class="QLabel" name="Show_lab_Message_1">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{width:20px;height:20px;font-size:21px;
+color:black;background-color:transparent;}</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;姓名：&lt;/p&gt;&lt;p&gt;科室：&lt;/p&gt;&lt;p&gt;病历号：&lt;/p&gt;&lt;p&gt;检验员：&lt;/p&gt;&lt;p&gt;送检员：&lt;/p&gt;&lt;p&gt;提示&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="Show_lab_Message_2">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{width:20px;height:20px;font-size:21px;
+color:black;background-color:transparent;}</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;性别：&lt;/p&gt;&lt;p&gt;年龄：&lt;/p&gt;&lt;p&gt;医生：&lt;/p&gt;&lt;p&gt;床号：&lt;/p&gt;&lt;p&gt;电话：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="Show_lab_Message_3">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{width:20px;height:20px;font-size:21px;
+color:black;background-color:transparent;}</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;患者编码：&lt;/p&gt;&lt;p&gt;样品类型：&lt;/p&gt;&lt;p&gt;送检时间：&lt;/p&gt;&lt;p&gt;检验时间：&lt;/p&gt;&lt;p&gt;报告时间：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="2">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="Show_btn_Ret">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{ 
+	background-color:rgb(64,64,64); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}
+QPushButton:hover
+{
+background-color:rgb(31,78,121); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}</string>
+       </property>
+       <property name="text">
+        <string>返回</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Show_btn_Write">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{ 
+	background-color:rgb(64,64,64); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}
+QPushButton:hover
+{
+background-color:rgb(31,78,121); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}</string>
+       </property>
+       <property name="text">
+        <string>编辑患者信息</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QTableWidget" name="Show_table_result">
+     <property name="styleSheet">
+      <string notr="true">QTableWidget 
+QHeaderView::section
+{
+background:rgb(31,78,121);
+border:none;  
+height:33px; 
+color:white;
+font-size:18px;
+}
+QTableWidget
+{
+background:rgb(210,220,228);
+gridline-color:white;
+font-size:18px; 
+color:black; 
+border:none;
+}</string>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhNone</set>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideMiddle</enum>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderHighlightSections">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>40</number>
+     </attribute>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>患者ID</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>试剂批号</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>样品状态</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>项目名称</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>检验结果</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>单位</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>范围</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="Show_lab_Curve">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>40</width>
+       <height>220</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel
+{
+	background-color:rgb(31,78,121);
+	font-size:16px;
+	color:white;
+}</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;检&lt;/p&gt;&lt;p&gt;测&lt;/p&gt;&lt;p&gt;原&lt;/p&gt;&lt;p&gt;始&lt;/p&gt;&lt;p&gt;曲&lt;/p&gt;&lt;p&gt;线&lt;/p&gt;&lt;p&gt;图&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <layout class="QHBoxLayout" name="Show_layout_Curve"/>
+   </item>
+   <item row="3" column="2">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="Show_btn_Monit">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{ 
+	background-color:rgb(64,64,64); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}
+QPushButton:hover
+{
+background-color:rgb(31,78,121); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}</string>
+       </property>
+       <property name="text">
+        <string>病程监测</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Show_btn_Print">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{ 
+	background-color:rgb(64,64,64); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}
+QPushButton:hover
+{
+background-color:rgb(31,78,121); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}</string>
+       </property>
+       <property name="text">
+        <string>打印报告</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

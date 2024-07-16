@@ -1,0 +1,2143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CUserWidget</class>
+ <widget class="QWidget" name="CUserWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1519</width>
+    <height>1042</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="tabWidget_6">
+     <property name="styleSheet">
+      <string notr="true">
+QTabBar::tab {
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+min-width: 250px;
+max-width: 306px;
+font-size: 28px;
+padding: 18px;
+background-color:rgb(34,70,120);
+	color:white;
+margin-right: 20;
+}
+QTabWidget QTabBar
+{
+	font-size: 28px;
+}
+
+QTabBar::tab:selected{
+
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+min-width: 250px;
+max-width: 306px;
+font-size: 28px;
+	background-color:rgb(241,129,1);
+color:white;
+
+	/*border: 2px solid #1B72BF; */   
+
+}
+
+ </string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="qwe_6">
+      <property name="styleSheet">
+       <string notr="true">QWidget{
+background-color: rgb(231, 230, 230);
+}</string>
+      </property>
+      <attribute name="title">
+       <string>用户管理</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QStackedWidget" name="User_mStacked">
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="page">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2" rowstretch="7,22,2" columnstretch="1,1,1">
+           <item row="2" column="0">
+            <widget class="QPushButton" name="mBtn_User_Add">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>-1</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{ 
+border-radius:8px;
+background-color:rgb(34,70,120);
+font-size:26px; 
+color:white;
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+QPushButton:pressed{
+background-color:rgb(241, 129,1);
+};</string>
+             </property>
+             <property name="text">
+              <string>增加</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QPushButton" name="mBtn_User_Delete">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>-1</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{ 
+border-radius:8px;
+background-color:rgb(34,70,120);
+font-size:26px; 
+color:white;
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+QPushButton:pressed{
+background-color:rgb(241, 129,1);
+};</string>
+             </property>
+             <property name="text">
+              <string>删除</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="mBtn_User_Update">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>-1</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{ 
+border-radius:8px;
+background-color:rgb(34,70,120);
+font-size:26px; 
+color:white;
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+QPushButton:pressed{
+background-color:rgb(241, 129,1);
+};</string>
+             </property>
+             <property name="text">
+              <string>修改</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="3">
+            <widget class="QTableWidget" name="mTable_User">
+             <property name="styleSheet">
+              <string notr="true">
+
+QTableWidget  QHeaderView::section
+{
+background:rgb(34,70,120);
+border:none;  
+height:48px; 
+color:white;
+font-size:28px;
+}
+QTableWidget
+{
+background:rgb(240,240,240);
+gridline-color:rgb(200,200,205);
+font-size:28px; 
+color:black; 
+border:none;
+border-bottom-right-radius:12px;
+border-bottom-left-radius:12px;
+}
+QHeaderView::section:first{
+border-top-left-radius:12px;
+}
+QHeaderView::section:last{
+border-top-right-radius:12px;
+}
+
+/*  设置垂直滚动条基本样式*/
+QScrollBar:vertical
+{
+    width:8px;
+	background-color: rgb(233, 236, 245);
+    margin:00px,0px,0px,0px;
+    padding-top:15px;   /* 留出9px给上面和下面的箭头*/
+    padding-bottom:5px;
+}
+QScrollBar::handle:vertical
+{
+    width:8px;
+    background:rgba(64,64,64,50%);
+	border-bottom-right-radius:12px;
+	border-top-right-radius:12px;
+    min-height:0;
+}
+QScrollBar::handle:vertical:hover
+{
+    width:8px;
+    background:rgba(64,64,64,70%);   /*  鼠标放到滚动条上的时候，颜色变深*/
+	border-bottom-right-radius:12px;
+	border-top-right-radius:12px;
+    min-height:0;
+}
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical   /* 当滚动条滚动的时候，上面的部分和下面的部分*/
+{
+    background:rgba(0,0,0,0%);
+    border-radius:4px;
+}
+QScrollBar::add-line:vertical {
+                  height: 0px;
+                  subcontrol-origin:margin;
+              }
+
+QScrollBar::up-arrow:vertical {
+                 subcontrol-origin: margin;
+                 height: 0px;
+                 border:0 0 0 0;
+                 border-image: url(:images/6.png);
+              }
+QScrollBar::sub-line:vertical {
+                  height: 0px;
+                  subcontrol-origin:margin;
+              }
+
+QScrollBar::down-arrow:vertical {
+                 subcontrol-origin: margin;
+                 height: 0px;
+                 border-image: url(:images/7.png);
+              }
+</string>
+             </property>
+             <property name="inputMethodHints">
+              <set>Qt::ImhNone</set>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SingleSelection</enum>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <property name="textElideMode">
+              <enum>Qt::ElideMiddle</enum>
+             </property>
+             <property name="verticalScrollMode">
+              <enum>QAbstractItemView::ScrollPerPixel</enum>
+             </property>
+             <property name="horizontalScrollMode">
+              <enum>QAbstractItemView::ScrollPerPixel</enum>
+             </property>
+             <attribute name="horizontalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="horizontalHeaderDefaultSectionSize">
+              <number>300</number>
+             </attribute>
+             <attribute name="horizontalHeaderHighlightSections">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="horizontalHeaderStretchLastSection">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderDefaultSectionSize">
+              <number>50</number>
+             </attribute>
+             <column>
+              <property name="text">
+               <string>用户ID</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>用户名</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="3">
+            <widget class="QFrame" name="frame_2">
+             <property name="styleSheet">
+              <string notr="true">QFrame{
+	border-radius:12px;
+	background-color: rgb(34,70,120);
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_9" columnstretch="0,0,0,0,0" rowminimumheight="1,1,1,1">
+              <property name="horizontalSpacing">
+               <number>20</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>7</number>
+              </property>
+              <item row="0" column="0" colspan="3">
+               <widget class="QLabel" name="label_39">
+                <property name="styleSheet">
+                 <string notr="true">QLabel
+{
+	color: rgb(255, 255, 255);
+	font-size:28px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>用户信息</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="mLab_User_Dept">
+                <property name="styleSheet">
+                 <string notr="true">QLabel
+{
+	color: rgb(255, 255, 255);
+	font-size:28px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>科室</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0" colspan="3">
+               <widget class="QLabel" name="mLab_User_ID">
+                <property name="styleSheet">
+                 <string notr="true">QLabel
+{
+	color: rgb(255, 255, 255);
+	font-size:28px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>用户ID</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLabel" name="mLab_User_Phone">
+                <property name="styleSheet">
+                 <string notr="true">QLabel
+{
+	color: rgb(255, 255, 255);
+	font-size:28px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>联系方式</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" colspan="3">
+               <widget class="QLabel" name="mLab_User_Name">
+                <property name="styleSheet">
+                 <string notr="true">QLabel
+{
+	color: rgb(255, 255, 255);
+	font-size:28px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>姓名</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="3">
+               <spacer name="horizontalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="3" column="4">
+               <widget class="QPushButton" name="mBtn_User_Logout">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>120</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>-1</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{ 
+border-radius:8px;
+background-color:rgb(34,70,120);
+font-size:26px; 
+color:white;
+}
+
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(241,129,1);
+};</string>
+                </property>
+                <property name="text">
+                 <string>注销</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_2">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4" stretch="10,1">
+           <item>
+            <widget class="QFrame" name="frame">
+             <property name="styleSheet">
+              <string notr="true">QFrame
+{
+
+background:rgb(240,240,240);
+
+border-radius:20px;
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout" stretch="3,4,3">
+              <property name="bottomMargin">
+               <number>100</number>
+              </property>
+              <item>
+               <layout class="QGridLayout" name="gridLayout_18" columnstretch="0,0,0,0">
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="mEdit_ID">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;
+	font-size:28px;
+	color: rgb(64, 64, 64);
+	background-color: rgb(255, 255, 255);
+}</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_56">
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>用户ID</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="3">
+                 <widget class="QLineEdit" name="mEdit_Password1">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;
+	font-size:28px;
+	color: rgb(64, 64, 64);
+	background-color: rgb(255, 255, 255);
+}</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_57">
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>姓名</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="mEdit_Name">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;
+	font-size:28px;
+	color: rgb(64, 64, 64);
+	background-color: rgb(255, 255, 255);
+}</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QLabel" name="label_58">
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>密码</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_60">
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>科室</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QLabel" name="label_59">
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>确认密码</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QLineEdit" name="mEdit_Password2">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;
+	font-size:28px;
+	color: rgb(64, 64, 64);
+	background-color: rgb(255, 255, 255);
+}</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="mEdit_Dept">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;
+	font-size:28px;
+	color: rgb(64, 64, 64);
+	background-color: rgb(255, 255, 255);
+}</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="3">
+                 <widget class="QLineEdit" name="mEdit_Contact">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit
+{
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;
+	font-size:28px;
+	color: rgb(64, 64, 64);
+	background-color: rgb(255, 255, 255);
+}</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QLabel" name="label_61">
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>联系方式</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QGridLayout" name="gridLayout_10" rowstretch="0,0,0,0" columnstretch="0,1,1,1">
+                <item row="3" column="3">
+                 <widget class="QCheckBox" name="mCheck_Upload">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QCheckBox
+{
+background: transparent;
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}
+QCheckBox::indicator{  
+    width: 30px;  
+    height: 30px;  
+}  
+  
+QCheckBox::indicator:unchecked{  
+    
+	image: url(:/image/images/checkoff.png);
+}  
+  
+QCheckBox::indicator:checked{  
+    
+	image: url(:/image/images/checkon.png);
+}  
+  
+QCheckBox::indicator:checked:disabled{  
+	image: url(:/image/images/checkoff.png);
+}  </string>
+                  </property>
+                  <property name="text">
+                   <string>导出上传</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QCheckBox" name="mCheck_Maintain">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QCheckBox
+{
+background: transparent;
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}
+QCheckBox::indicator{  
+    width: 30px;  
+    height: 30px;  
+}  
+  
+QCheckBox::indicator:unchecked{  
+    
+	image: url(:/image/images/checkoff.png);
+}  
+  
+QCheckBox::indicator:checked{  
+    
+	image: url(:/image/images/checkon.png);
+}  
+  
+QCheckBox::indicator:checked:disabled{  
+	image: url(:/image/images/checkoff.png);
+}  </string>
+                  </property>
+                  <property name="text">
+                   <string>维护权限</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QCheckBox" name="mCheck_Text">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QCheckBox
+{
+background: transparent;
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}
+QCheckBox::indicator{  
+    width: 30px;  
+    height: 30px;  
+}  
+  
+QCheckBox::indicator:unchecked{  
+    
+	image: url(:/image/images/checkoff.png);
+}  
+  
+QCheckBox::indicator:checked{  
+    
+	image: url(:/image/images/checkon.png);
+}  
+  
+QCheckBox::indicator:checked:disabled{  
+	image: url(:/image/images/checkoff.png);
+}  </string>
+                  </property>
+                  <property name="text">
+                   <string>测试权限</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QCheckBox" name="mCheck_Set">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QCheckBox
+{
+background: transparent;
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}
+QCheckBox::indicator{  
+    width: 30px;  
+    height: 30px;  
+}  
+  
+QCheckBox::indicator:unchecked{  
+    
+	image: url(:/image/images/checkoff.png);
+}  
+  
+QCheckBox::indicator:checked{  
+    
+	image: url(:/image/images/checkon.png);
+}  
+  
+QCheckBox::indicator:checked:disabled{  
+	image: url(:/image/images/checkoff.png);
+}  </string>
+                  </property>
+                  <property name="text">
+                   <string>设置权限</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QCheckBox" name="mCheck_User">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QCheckBox
+{
+background: transparent;
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}
+QCheckBox::indicator{  
+    width: 30px;  
+    height: 30px;  
+}  
+  
+QCheckBox::indicator:unchecked{  
+    
+	image: url(:/image/images/checkoff.png);
+}  
+  
+QCheckBox::indicator:checked{  
+    
+	image: url(:/image/images/checkon.png);
+}  
+  
+QCheckBox::indicator:checked:disabled{  
+	image: url(:/image/images/checkoff.png);
+}  </string>
+                  </property>
+                  <property name="text">
+                   <string>账户管理</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QCheckBox" name="mCheck_Record">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QCheckBox
+{
+background: transparent;
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}
+QCheckBox::indicator{  
+    width: 30px;  
+    height: 30px;  
+}  
+  
+QCheckBox::indicator:unchecked{  
+    
+	image: url(:/image/images/checkoff.png);
+}  
+  
+QCheckBox::indicator:checked{  
+    
+	image: url(:/image/images/checkon.png);
+}  
+  
+QCheckBox::indicator:checked:disabled{  
+	image: url(:/image/images/checkoff.png);
+}  </string>
+                  </property>
+                  <property name="text">
+                   <string>记录查询</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_64">
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel
+{
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>权限</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="3">
+                 <widget class="QCheckBox" name="mCheck_Print">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QCheckBox
+{
+background: transparent;
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}
+QCheckBox::indicator{  
+    width: 30px;  
+    height: 30px;  
+}  
+  
+QCheckBox::indicator:unchecked{  
+    
+	image: url(:/image/images/checkoff.png);
+}  
+  
+QCheckBox::indicator:checked{  
+    
+	image: url(:/image/images/checkon.png);
+}  
+  
+QCheckBox::indicator:checked:disabled{  
+	image: url(:/image/images/checkoff.png);
+}  </string>
+                  </property>
+                  <property name="text">
+                   <string>报告权限</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="2">
+                 <widget class="QCheckBox" name="mCheck_Calib">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QCheckBox
+{
+background: transparent;
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}
+QCheckBox::indicator{  
+    width: 30px;  
+    height: 30px;  
+}  
+  
+QCheckBox::indicator:unchecked{  
+    
+	image: url(:/image/images/checkoff.png);
+}  
+  
+QCheckBox::indicator:checked{  
+    
+	image: url(:/image/images/checkon.png);
+}  
+  
+QCheckBox::indicator:checked:disabled{  
+	image: url(:/image/images/checkoff.png);
+}  </string>
+                  </property>
+                  <property name="text">
+                   <string>校正权限</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QCheckBox" name="mCheck_QC">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QCheckBox
+{
+background: transparent;
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}
+QCheckBox::indicator{  
+    width: 30px;  
+    height: 30px;  
+}  
+  
+QCheckBox::indicator:unchecked{  
+    
+	image: url(:/image/images/checkoff.png);
+}  
+  
+QCheckBox::indicator:checked{  
+    
+	image: url(:/image/images/checkon.png);
+}  
+  
+QCheckBox::indicator:checked:disabled{  
+	image: url(:/image/images/checkoff.png);
+}  </string>
+                  </property>
+                  <property name="text">
+                   <string>质控权限</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,2,1">
+             <item>
+              <widget class="QPushButton" name="mBtn_User_Retun">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>60</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(64,64,64);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+               </property>
+               <property name="text">
+                <string>返回</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_9">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="mBtn_User_Ok_Add">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>60</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>-1</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(64,64,64);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+               </property>
+               <property name="text">
+                <string>确定</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <property name="styleSheet">
+       <string notr="true">QWidget{
+background-color: rgb(231, 230, 230);
+}</string>
+      </property>
+      <attribute name="title">
+       <string>数据统计</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QStackedWidget" name="mStacked_Statistics">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="page_5">
+          <layout class="QGridLayout" name="gridLayout_4" rowstretch="1,1,2" columnstretch="3,4,3">
+           <property name="bottomMargin">
+            <number>11</number>
+           </property>
+           <item row="0" column="1">
+            <spacer name="verticalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>191</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>434</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="1">
+            <widget class="QTabWidget" name="tabWidget_High">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>320</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">
+QTabBar::tab {
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+min-width: 200px;
+max-width: 250px;
+padding: 15px;
+font-size: 28px;
+background-color:rgb(255, 255, 255);
+	color:white;
+margin-right: 0;
+}
+QTabWidget QTabBar
+{
+	font-size: 28px;
+}
+
+QTabBar::tab:selected{
+
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+min-width: 200px;
+max-width:250px;
+padding: 15px;
+font-size: 28px;
+	background-color:rgb(64,64,64);
+color:white;
+
+	/*border: 2px solid #1B72BF; */   
+
+}</string>
+             </property>
+             <widget class="QWidget" name="qwe_5">
+              <property name="styleSheet">
+               <string notr="true">QWidget
+{
+background-color:rgb(255, 255, 255);
+}</string>
+              </property>
+              <attribute name="title">
+               <string>数据统计-验证</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_3" rowstretch="1,1,1" columnstretch="1,2,1">
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="mEdit_Statistics_Login">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>11111111</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit
+{
+	border: 1px solid #e1e3e7;         
+	border-radius: 5px;
+	font-size:28px;
+	color: rgb(64, 64, 64);
+	background-color: rgb(255, 255, 255);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="echoMode">
+                  <enum>QLineEdit::Password</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QPushButton" name="mBtn_Statistics_Login">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>300</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(64,64,64);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+                 </property>
+                 <property name="text">
+                  <string>确认</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0" colspan="3">
+                <widget class="QLabel" name="label_62">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel
+{
+	color: rgb(0, 0, 0);
+	font-size:28px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>请输入操作人员密码</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <spacer name="verticalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="2" column="2">
+                <spacer name="verticalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>433</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="1">
+            <spacer name="verticalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>384</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_6">
+          <layout class="QGridLayout" name="gridLayout" columnstretch="0,2,0,2,1,1,1" rowminimumheight="0,1">
+           <property name="horizontalSpacing">
+            <number>10</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>12</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_45">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel
+{
+	color: rgb(86, 86, 86);
+	font-size:28px;
+}</string>
+             </property>
+             <property name="text">
+              <string>统计区间</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="mEdit_Origin_Time">
+             <property name="minimumSize">
+              <size>
+               <width>300</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit
+{
+	border: 0px solid #404040;         
+	border-radius: 5px;
+	font-size:28px;
+	color: rgb(64, 64, 64);
+	background-color: rgb(255, 255, 255);
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_44">
+             <property name="maximumSize">
+              <size>
+               <width>28</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel
+{
+	color: rgb(86, 86, 86);
+	font-size:28px;
+}</string>
+             </property>
+             <property name="text">
+              <string>至</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLineEdit" name="mEdit_End_Time">
+             <property name="minimumSize">
+              <size>
+               <width>300</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit
+{
+	border: 0px solid #404040;         
+	border-radius: 5px;
+	font-size:28px;
+	color: rgb(64, 64, 64);
+	background-color: rgb(255, 255, 255);
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="mBtn_Statistics_Select">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>60</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>-1</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{ 
+	border-radius:8px;
+background-color:rgb(64,64,64);
+font-size:26px; 
+color:white;
+
+
+}
+QPushButton:hover{
+font-size:26px; 
+color:white;
+}
+
+QPushButton:pressed{
+	background-color:rgb(31, 78, 121);
+};
+</string>
+             </property>
+             <property name="text">
+              <string>查询</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5">
+            <widget class="QCheckBox" name="mCheck_Statistics_Project">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox
+{
+background: transparent;
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}
+QCheckBox::indicator{  
+    width: 30px;  
+    height: 30px;  
+}  
+  
+QCheckBox::indicator:unchecked{  
+    
+	image: url(:/image/images/checkoff.png);
+}  
+  
+QCheckBox::indicator:checked{  
+    
+	image: url(:/image/images/checkon.png);
+}  
+  
+QCheckBox::indicator:checked:disabled{  
+	image: url(:/image/images/checkoff.png);
+}  </string>
+             </property>
+             <property name="text">
+              <string>按项目查找</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="6">
+            <widget class="QCheckBox" name="mCheck_Statistics_Batch">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox
+{
+background: transparent;
+	color: rgb(64, 64, 64);
+	font-size:28px;
+}
+QCheckBox::indicator{  
+    width: 30px;  
+    height: 30px;  
+}  
+  
+QCheckBox::indicator:unchecked{  
+    
+	image: url(:/image/images/checkoff.png);
+}  
+  
+QCheckBox::indicator:checked{  
+    
+	image: url(:/image/images/checkon.png);
+}  
+  
+QCheckBox::indicator:checked:disabled{  
+	image: url(:/image/images/checkoff.png);
+}  </string>
+             </property>
+             <property name="text">
+              <string>按批号查找</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="7">
+            <widget class="QStackedWidget" name="m_stacked_Consumable">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="page_3">
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QTableWidget" name="mTable_Statistics_Project">
+                 <property name="styleSheet">
+                  <string notr="true">
+
+QTableWidget  QHeaderView::section
+{
+background:rgb(130,130,130);
+border:none;  
+height:48px; 
+color:white;
+font-size:28px;
+}
+QTableWidget
+{
+background:rgb(240,240,240);
+gridline-color:rgb(200,200,205);
+font-size:28px; 
+color:black; 
+border:none;
+border-bottom-right-radius:8px;
+border-bottom-left-radius:8px;
+}
+QHeaderView::section:first{
+border-top-left-radius:8px;
+}
+QHeaderView::section:last{
+border-top-right-radius:8px;
+}
+
+/*  设置垂直滚动条基本样式*/
+QScrollBar:vertical
+{
+    width:8px;
+	background-color: rgb(233, 236, 245);
+    margin:00px,0px,0px,0px;
+    padding-top:15px;   /* 留出9px给上面和下面的箭头*/
+    padding-bottom:5px;
+}
+QScrollBar::handle:vertical
+{
+    width:8px;
+    background:rgba(64,64,64,50%);
+	border-bottom-right-radius:8px;
+	border-top-right-radius:8px;
+    min-height:0;
+}
+QScrollBar::handle:vertical:hover
+{
+    width:8px;
+    background:rgba(64,64,64,70%);   /*  鼠标放到滚动条上的时候，颜色变深*/
+	border-bottom-right-radius:8px;
+	border-top-right-radius:8px;
+    min-height:0;
+}
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical   /* 当滚动条滚动的时候，上面的部分和下面的部分*/
+{
+    background:rgba(0,0,0,0%);
+    border-radius:4px;
+}
+QScrollBar::add-line:vertical {
+                  height: 0px;
+                  subcontrol-origin:margin;
+              }
+
+QScrollBar::up-arrow:vertical {
+                 subcontrol-origin: margin;
+                 height: 0px;
+                 border:0 0 0 0;
+                 border-image: url(:images/6.png);
+              }
+QScrollBar::sub-line:vertical {
+                  height: 0px;
+                  subcontrol-origin:margin;
+              }
+
+QScrollBar::down-arrow:vertical {
+                 subcontrol-origin: margin;
+                 height: 0px;
+                 border-image: url(:images/7.png);
+              }
+</string>
+                 </property>
+                 <property name="inputMethodHints">
+                  <set>Qt::ImhNone</set>
+                 </property>
+                 <property name="editTriggers">
+                  <set>QAbstractItemView::NoEditTriggers</set>
+                 </property>
+                 <property name="selectionMode">
+                  <enum>QAbstractItemView::SingleSelection</enum>
+                 </property>
+                 <property name="selectionBehavior">
+                  <enum>QAbstractItemView::SelectRows</enum>
+                 </property>
+                 <property name="textElideMode">
+                  <enum>Qt::ElideMiddle</enum>
+                 </property>
+                 <property name="verticalScrollMode">
+                  <enum>QAbstractItemView::ScrollPerPixel</enum>
+                 </property>
+                 <property name="horizontalScrollMode">
+                  <enum>QAbstractItemView::ScrollPerPixel</enum>
+                 </property>
+                 <attribute name="horizontalHeaderVisible">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderDefaultSectionSize">
+                  <number>300</number>
+                 </attribute>
+                 <attribute name="horizontalHeaderHighlightSections">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderStretchLastSection">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderVisible">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderDefaultSectionSize">
+                  <number>50</number>
+                 </attribute>
+                 <row>
+                  <property name="text">
+                   <string>新建行</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>新建行</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>新建行</string>
+                  </property>
+                 </row>
+                 <column>
+                  <property name="text">
+                   <string>序号</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>项目</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>数量</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="page_4">
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QTableWidget" name="mTable_Statistics_Batch">
+                 <property name="styleSheet">
+                  <string notr="true">
+
+QTableWidget  QHeaderView::section
+{
+background:rgb(130,130,130);
+border:none;  
+height:48px; 
+color:white;
+font-size:28px;
+}
+QTableWidget
+{
+background:rgb(240,240,240);
+gridline-color:rgb(200,200,205);
+font-size:28px; 
+color:black; 
+border:none;
+border-bottom-right-radius:8px;
+border-bottom-left-radius:8px;
+}
+QHeaderView::section:first{
+border-top-left-radius:8px;
+}
+QHeaderView::section:last{
+border-top-right-radius:8px;
+}
+
+/*  设置垂直滚动条基本样式*/
+QScrollBar:vertical
+{
+    width:8px;
+	background-color: rgb(233, 236, 245);
+    margin:00px,0px,0px,0px;
+    padding-top:15px;   /* 留出9px给上面和下面的箭头*/
+    padding-bottom:5px;
+}
+QScrollBar::handle:vertical
+{
+    width:8px;
+    background:rgba(64,64,64,50%);
+	border-bottom-right-radius:8px;
+	border-top-right-radius:8px;
+    min-height:0;
+}
+QScrollBar::handle:vertical:hover
+{
+    width:8px;
+    background:rgba(64,64,64,70%);   /*  鼠标放到滚动条上的时候，颜色变深*/
+	border-bottom-right-radius:8px;
+	border-top-right-radius:8px;
+    min-height:0;
+}
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical   /* 当滚动条滚动的时候，上面的部分和下面的部分*/
+{
+    background:rgba(0,0,0,0%);
+    border-radius:4px;
+}
+QScrollBar::add-line:vertical {
+                  height: 0px;
+                  subcontrol-origin:margin;
+              }
+
+QScrollBar::up-arrow:vertical {
+                 subcontrol-origin: margin;
+                 height: 0px;
+                 border:0 0 0 0;
+                 border-image: url(:images/6.png);
+              }
+QScrollBar::sub-line:vertical {
+                  height: 0px;
+                  subcontrol-origin:margin;
+              }
+
+QScrollBar::down-arrow:vertical {
+                 subcontrol-origin: margin;
+                 height: 0px;
+                 border-image: url(:images/7.png);
+              }
+</string>
+                 </property>
+                 <property name="inputMethodHints">
+                  <set>Qt::ImhNone</set>
+                 </property>
+                 <property name="editTriggers">
+                  <set>QAbstractItemView::NoEditTriggers</set>
+                 </property>
+                 <property name="selectionMode">
+                  <enum>QAbstractItemView::SingleSelection</enum>
+                 </property>
+                 <property name="selectionBehavior">
+                  <enum>QAbstractItemView::SelectRows</enum>
+                 </property>
+                 <property name="textElideMode">
+                  <enum>Qt::ElideMiddle</enum>
+                 </property>
+                 <property name="verticalScrollMode">
+                  <enum>QAbstractItemView::ScrollPerPixel</enum>
+                 </property>
+                 <property name="horizontalScrollMode">
+                  <enum>QAbstractItemView::ScrollPerPixel</enum>
+                 </property>
+                 <attribute name="horizontalHeaderVisible">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderDefaultSectionSize">
+                  <number>300</number>
+                 </attribute>
+                 <attribute name="horizontalHeaderHighlightSections">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderStretchLastSection">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderVisible">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderDefaultSectionSize">
+                  <number>50</number>
+                 </attribute>
+                 <row>
+                  <property name="text">
+                   <string>新建行</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>新建行</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>新建行</string>
+                  </property>
+                 </row>
+                 <column>
+                  <property name="text">
+                   <string>序号</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>项目</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>批号</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>数量</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CPowerWidget</class>
+ <widget class="QWidget" name="CPowerWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1422</width>
+    <height>906</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>26</number>
+   </property>
+   <property name="topMargin">
+    <number>26</number>
+   </property>
+   <property name="rightMargin">
+    <number>26</number>
+   </property>
+   <property name="bottomMargin">
+    <number>43</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="tabWidget_3">
+     <property name="styleSheet">
+      <string notr="true">
+QTabBar::tab {
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+min-width: 30ex;
+padding: 15px;
+font-size: 28px;
+background-color:rgb(34,70,120);
+color:white;
+}
+QTabWidget QTabBar
+{
+	font-size: 28px;
+}
+
+QTabWidget::pane
+{
+background-color: white;
+
+
+}​</string>
+     </property>
+     <widget class="QWidget" name="qwe_3">
+      <property name="styleSheet">
+       <string notr="true">QWidget
+{
+background-color: rgb(255, 255, 255);
+}</string>
+      </property>
+      <attribute name="title">
+       <string>关机</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,1,4,1,2">
+       <property name="bottomMargin">
+        <number>30</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="styleSheet">
+          <string notr="true">QLabel
+{
+	color: rgb(137, 137, 137);
+	font-size:36px;
+}</string>
+         </property>
+         <property name="text">
+          <string>确定是否关闭设备</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="styleSheet">
+          <string notr="true">QLabel
+{
+	color: rgb(137, 137, 137);
+	font-size:28px;
+}</string>
+         </property>
+         <property name="text">
+          <string notr="true">CLi-M300</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <spacer name="horizontalSpacer_11">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_7">
+           <property name="minimumSize">
+            <size>
+             <width>530</width>
+             <height>430</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>530</width>
+             <height>430</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>-1</pointsize>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel
+{
+	border-image: url(:/image/images/CLi-M300.png);
+	color: rgb(137, 137, 137);
+	font-size:28px;
+}</string>
+           </property>
+           <property name="locale">
+            <locale language="Chinese" country="China"/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_12">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="styleSheet">
+          <string notr="true">QLabel
+{
+	color: rgb(137, 137, 137);
+	font-size:28px;
+}</string>
+         </property>
+         <property name="text">
+          <string>此操作仅关闭计算机</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_22" columnstretch="1,1,1,1">
+         <item row="0" column="0">
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="mBtn_Cancel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>-1</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{
+color: rgb(0, 0, 0); 
+	background-color:rgb(240,240,240);
+	font-size:28px; 
+border-bottom-right-radius: 25px;               /* 角弧度:左上角*/ 
+border-top-right-radius:25px;				/* 角弧度:左下角*/  
+
+
+
+}
+QPushButton:hover
+{
+	background-color:rgb(255,255,255);
+	font-size:28px;
+	color:rgb(63,63,63);
+
+border-bottom-right-radius: 25px;               /* 角弧度:左上角*/ 
+border-top-right-radius:25px;				/* 角弧度:左下角*/  
+	border: 2px solid #404040;    
+}</string>
+           </property>
+           <property name="text">
+            <string>取消</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="mBtn_OK">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>-1</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{ 
+background-color:rgb(34,70,120);
+	font-size:28px; 
+	color:rgb(255,255,255);
+border-top-left-radius: 25px;               /* 角弧度:左上角*/ 
+border-bottom-left-radius:25px;				/* 角弧度:左下角*/  
+
+
+
+}
+QPushButton:hover
+{
+	background-color:rgb(255,255,255);
+	font-size:28px;
+	color:rgb(63,63,63);
+
+border-top-left-radius: 25px;               /* 角弧度:左上角*/ 
+border-bottom-left-radius:25px;				/* 角弧度:左下角*/ 
+	border: 2px solid #404040;     
+}</string>
+           </property>
+           <property name="text">
+            <string>确定</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,30 @@
+﻿#MainWindow QPushButton
+{
+    background-color:rgb(34,70,120);
+    font-size:28px;
+    border-radius:10px;
+    color:white;
+}
+#MainWindow QPushButton:hover
+{
+    background-color:rgb(241,129,1);
+    font-size:28px;
+    border-radius:10px;
+    color:white;pi
+}
+#MainWindow
+{
+    background-color:white
+}
+QLabel#m_lab_line
+{
+    background-color:rgb(34,70,120);
+}
+QPushButton#m_btn_power
+{
+    background:url(":/pics/images/power1.png");
+}
+QPushButton#m_btn_power:hover
+{
+    background:url(":/pics/images/power2.png");
+}

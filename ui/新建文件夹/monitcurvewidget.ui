@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MonitCurveWidget</class>
+ <widget class="QWidget" name="MonitCurveWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>997</width>
+    <height>738</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,1,0,1" columnstretch="1,1,1">
+   <item row="0" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="Monit_lab_num">
+       <property name="minimumSize">
+        <size>
+         <width>35</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel
+{
+    background-color:rgb(64,64,64);
+	font-size:23px;
+	color:white;
+border-radius:6px;
+}</string>
+       </property>
+       <property name="text">
+        <string>患者信息 测试流水号：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="Monit_lab_Item_1">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{width:20px;height:20px;font-size:21px;
+color:black;background-color:transparent;}</string>
+     </property>
+     <property name="text">
+      <string>无项目</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLabel" name="Monit_lab_Item_2">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{width:20px;height:20px;font-size:21px;
+color:black;background-color:transparent;}</string>
+     </property>
+     <property name="text">
+      <string>无项目</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QLabel" name="Monit_lab_Item_3">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{width:20px;height:20px;font-size:21px;
+color:black;background-color:transparent;}</string>
+     </property>
+     <property name="text">
+      <string>无项目</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <layout class="QVBoxLayout" name="monit_layout_Curve1"/>
+   </item>
+   <item row="2" column="1">
+    <layout class="QVBoxLayout" name="monit_layout_Curve2"/>
+   </item>
+   <item row="2" column="2">
+    <layout class="QVBoxLayout" name="monit_layout_Curve3"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="Monit_lab_Item_4">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{width:20px;height:20px;font-size:21px;
+color:black;background-color:transparent;}</string>
+     </property>
+     <property name="text">
+      <string>无项目</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLabel" name="Monit_lab_Item_5">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{width:20px;height:20px;font-size:21px;
+color:black;background-color:transparent;}</string>
+     </property>
+     <property name="text">
+      <string>无项目</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <layout class="QVBoxLayout" name="monit_layout_Curve4"/>
+   </item>
+   <item row="4" column="1">
+    <layout class="QVBoxLayout" name="monit_layout_Curve5"/>
+   </item>
+   <item row="4" column="2">
+    <layout class="QGridLayout" name="Btn_layout" rowstretch="2,1,2,1,2,1" columnstretch="1,1">
+     <item row="4" column="1">
+      <widget class="QPushButton" name="Monit_btn_Ret">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{ 
+	background-color:rgb(64,64,64); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}
+QPushButton:hover
+{
+background-color:rgb(31,78,121); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}</string>
+       </property>
+       <property name="text">
+        <string>返回</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="Monit_btn_Inquery">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{ 
+	background-color:rgb(64,64,64); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}
+QPushButton:hover
+{
+background-color:rgb(31,78,121); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}</string>
+       </property>
+       <property name="text">
+        <string>查询</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="Monit_btn_Months">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{ 
+	background-color:rgb(64,64,64); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}
+QPushButton:hover
+{
+background-color:rgb(31,78,121); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}</string>
+       </property>
+       <property name="text">
+        <string>2021-07</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="Monit_btn_Print">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>35</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{ 
+	background-color:rgb(64,64,64); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}
+QPushButton:hover
+{
+background-color:rgb(31,78,121); 
+font-size:21px; 
+border-radius:8px;
+color:white;
+}</string>
+       </property>
+       <property name="text">
+        <string>打印报告</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QComboBox" name="Monit_box_Item">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox
+{
+	font-size:21px;
+	color:black;
+	background:white;
+	border-width:0;
+	border-style:outset;
+	border-radius:5px;
+}
+QComboBox::down-arrow 
+{
+	image: url(://png/drop.png);
+	height: 33px;
+	width: 33px;
+} 
+QComboBox::drop-down
+{
+	background-color: transparent;
+}</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="3" column="1">
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="1" column="1">
+      <spacer name="verticalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

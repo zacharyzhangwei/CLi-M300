@@ -1,0 +1,55 @@
+﻿
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
+<!--<file name="winmm.dll" loadFrom="%SystemRoot%\system32\winmm.dll" />
+<file name="lpk.dll" loadFrom="%SystemRoot%\system32\lpk.dll" />
+<file name="version.dll" loadFrom="%SystemRoot%\system32\version.dll" />-->
+
+<file name="ntdll.dll" loadFrom="%SystemRoot%\System32\ntdll.dll" />
+<file name="wow64.dll" loadFrom="%SystemRoot%\System32\wow64.dll" />
+<file name="wow64win.dll" loadFrom="%SystemRoot%\System32\wow64win.dll" />
+<file name="version.dll" loadFrom="%SystemRoot%\SysWOW64\version.dll" />
+<file name="apphelp.dll" loadFrom="%SystemRoot%\SysWOW64\apphelp.dll" />
+<file name="bcrypt.dll" loadFrom="%SystemRoot%\SysWOW64\bcrypt.dll" />
+<file name="bcryptprimitives.dll" loadFrom="%SystemRoot%\SysWOW64\bcryptprimitives.dll" />
+<file name="cfgmgr32.dll" loadFrom="%SystemRoot%\SysWOW64\cfgmgr32.dll" />
+<file name="CoreMessaging.dll" loadFrom="%SystemRoot%\SysWOW64\CoreMessaging.dll" />
+<file name="CoreUIComponents.dll" loadFrom="%SystemRoot%\SysWOW64\CoreUIComponents.dll" />
+<file name="crypt32.dll" loadFrom="%SystemRoot%\SysWOW64\crypt32.dll" />
+<file name="cryptbase.dll" loadFrom="%SystemRoot%\SysWOW64\cryptbase.dll" />
+<file name="d3d11.dll" loadFrom="%SystemRoot%\SysWOW64\d3d11.dll" />
+<file name="DataExchange.dll" loadFrom="%SystemRoot%\SysWOW64\DataExchange.dll" />
+<file name="dcomp.dll" loadFrom="%SystemRoot%\SysWOW64\dcomp.dll" />
+<file name="devobj.dll" loadFrom="%SystemRoot%\SysWOW64\devobj.dll" />
+<file name="dnsapi.dll" loadFrom="%SystemRoot%\SysWOW64\dnsapi.dll" />
+<file name="dwmapi.dll" loadFrom="%SystemRoot%\SysWOW64\dwmapi.dll" />
+<file name="DWrite.dll" loadFrom="%SystemRoot%\SysWOW64\DWrite.dll" />
+<file name="dxgi.dll" loadFrom="%SystemRoot%\SysWOW64\dxgi.dll" />
+<file name="gdi32full.dll" loadFrom="%SystemRoot%\SysWOW64\gdi32full.dll" />
+<file name="IPHLPAPI.dll" loadFrom="%SystemRoot%\SysWOW64\IPHLPAPI.dll" />
+<file name="kernel.appcore.dll" loadFrom="%SystemRoot%\SysWOW64\kernel.appcore.dll" />
+<file name="KernelBase.dll" loadFrom="%SystemRoot%\SysWOW64\KernelBase.dll" />
+<file name="mpr.dll" loadFrom="%SystemRoot%\SysWOW64\mpr.dll" />
+<file name="msasn1.dll" loadFrom="%SystemRoot%\SysWOW64\msasn1.dll" />
+<file name="msvcp_win.dll" loadFrom="%SystemRoot%\SysWOW64\msvcp_win.dll" />
+<file name="msvcp140.dll" loadFrom="%SystemRoot%\SysWOW64\msvcp140.dll" />
+<file name="ntdll.dll" loadFrom="%SystemRoot%\SysWOW64\ntdll.dll" />
+<file name="ntmarta.dll" loadFrom="%SystemRoot%\SysWOW64\ntmarta.dll" />
+<file name="profapi.dll" loadFrom="%SystemRoot%\SysWOW64\profapi.dll" />
+<file name="shfolder.dll" loadFrom="%SystemRoot%\SysWOW64\shfolder.dll" />
+<file name="TextInputFramework.dll" loadFrom="%SystemRoot%\SysWOW64\TextInputFramework.dll" />
+<file name="twinapi.appcore.dll" loadFrom="%SystemRoot%\SysWOW64\twinapi.appcore.dll" />
+<file name="ucrtbase.dll" loadFrom="%SystemRoot%\SysWOW64\ucrtbase.dll" />
+<file name="uxtheme.dll" loadFrom="%SystemRoot%\SysWOW64\uxtheme.dll" />
+<file name="vcruntime140.dll" loadFrom="%SystemRoot%\SysWOW64\vcruntime140.dll" />
+<file name="win32u.dll" loadFrom="%SystemRoot%\SysWOW64\win32u.dll" />
+<file name="windows.storage.dll" loadFrom="%SystemRoot%\SysWOW64\windows.storage.dll" />
+<file name="winmm.dll" loadFrom="%SystemRoot%\SysWOW64\winmm.dll" />
+<file name="wintrust.dll" loadFrom="%SystemRoot%\SysWOW64\wintrust.dll" />
+<file name="WinTypes.dll" loadFrom="%SystemRoot%\SysWOW64\WinTypes.dll" />
+<file name="wldp.dll" loadFrom="%SystemRoot%\SysWOW64\wldp.dll" />
+
+
+</assembly>
+
+

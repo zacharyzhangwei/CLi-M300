@@ -215,7 +215,7 @@ void CSetWidget::on_mBtn_High_Login_clicked()
 {
     if(ui->mEdit_High_Login->text()=="111111")
     {
-
+        ui->mFrame_Pre->show();
     }else
     {
         CMsgDialog *msgdlog=new CMsgDialog(true,true,false,false,true,false);
@@ -228,10 +228,11 @@ void CSetWidget::on_mBtn_High_Login_clicked()
     }
 }
 
-void CSetWidget::on_pushButton_clicked()
+void CSetWidget::on_insertfile_clicked()
 {
     QString fileName = QFileDialog::getOpenFileName(NULL,"Open File","","CSV File (*.csv)");
     QFileInfo fi(fileName);
+    qDebug()<<fileName;
     if(fi.exists()){
         QFile fl(fi.absoluteFilePath());
         if(fl.open(QFile::ReadOnly)){
@@ -240,12 +241,77 @@ void CSetWidget::on_pushButton_clicked()
             ST_Order d_data1;
             for(int i=0;i<f_data.length();i++){
                 QStringList orderinfo = f_data.at(i).split(",");
+                QString pred = f_data.at(0);
                 d_data1.order_type<<orderinfo.at(1);
                 d_data1.t_order<<orderinfo;
-//                d_data1.n_order=0;
+                d_data1.n_order=0;
+                if(pred.indexOf(tr("前处理"))!=-1){
+                    d_data1.model=true;
+                }else{
+                    d_data1.model=false;
+                }
                 Control::CSetManager::getInstances()->set_order(d_data1);
             }
-            ui->file_name->setText(fi.baseName());
+            ui->file_name->setText(fi.absoluteFilePath());
         }
+    }
+}
+
+void CSetWidget::on_device_reset_clicked()
+{
+    if(Control::CModBusManager::getInstance()->WriteBit(DEF_DEVICERESET,1)){
+        qDebug()<<"device reset success!";
+    }
+}
+
+void CSetWidget::on_device_selfcheck_clicked()
+{
+    if(Control::CModBusManager::getInstance()->WriteBit(DEF_SELFTEST,1)){
+        qDebug()<<"device selfcheck success!";
+    }
+}
+
+void CSetWidget::on_push_air_clicked()
+{
+    if(Control::CModBusManager::getInstance()->WriteBit(DEF_PUSHAIR,1)){
+        qDebug()<<"device push air success!";
+    }
+}
+
+void CSetWidget::on_clean_tip_clicked()
+{
+    if(Control::CModBusManager::getInstance()->WriteBit(DEF_CLEANTP,1)){
+        qDebug()<<"device clean tip success!";
+    }
+}
+
+void CSetWidget::on_clean_glass_clicked()
+{
+    if(Control::CModBusManager::getInstance()->WriteBit(DEF_CLEANSHOT,1)){
+        qDebug()<<"device clean shot success!";
+        CMsgDialog *msgdlog;
+        msgdlog=new CMsgDialog(true,true,false,false,true,true);
+        msgdlog->ui->mLabel_text1->setText(tr("请确认检测器已清洁完成?"));
+        msgdlog->ui->mLabel_text2->setText(tr("提示"));
+        msgdlog->ui->mBtn_OK->setText(tr("确认"));
+        msgdlog->ui->mBtn_Cancel->setText(tr("取消"));
+        int nRes=msgdlog->exec();
+        if(nRes==QDialog::Accepted)
+        {
+            Control::CModBusManager::getInstance()->WriteBit(DEF_INIT,1);
+        }
+    }
+}
+
+void CSetWidget::on_mCheck_dftest_clicked(bool checked)
+{
+    if(checked){
+        ui->insertfile->setEnabled(false);
+        ST_Order empty;
+        Control::CSetManager::getInstances()->set_order(empty);
+        emit sgn_Autotest(true);
+    }else{
+        ui->insertfile->setEnabled(true);
+        emit sgn_Autotest(false);
     }
 }

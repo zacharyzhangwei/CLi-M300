@@ -34,7 +34,19 @@ public:
 private slots:
     void on_mBtn_High_Login_clicked();
 
-    void on_pushButton_clicked();
+    void on_insertfile_clicked();
+
+    void on_device_reset_clicked();
+
+    void on_device_selfcheck_clicked();
+
+    void on_push_air_clicked();
+
+    void on_clean_tip_clicked();
+
+    void on_clean_glass_clicked();
+
+    void on_mCheck_dftest_clicked(bool checked);
 
 private:
     void setTableScroller(QTableWidget *nTable);//设置类安卓滑动
@@ -57,6 +69,8 @@ private:
     bool itemWriteFlag=false;
     bool itemselectFlag=false;//选中标志位
 
+signals:
+    void sgn_Autotest(bool m_model);
 
 };
 

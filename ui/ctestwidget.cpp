@@ -44,11 +44,20 @@ void CTestWidget::selfCheck(int i)
 
 void CTestWidget::slt_startTest()
 {
-    if(Control::CModBusManager::getInstance()->WriteBit(DEF_DEVTEST,1)){
-        CGLOBAL->getTools()->setdelaymTime(500);
-        m_Cmd = enum_Test_DevTest;
-        qDebug()<<"start Test";
+    if(model==true){
+        if(Control::CModBusManager::getInstance()->WriteBit(DEF_STEST,1)){
+            CGLOBAL->getTools()->setdelaymTime(500);
+            m_Cmd = enum_Test_St;
+            qDebug()<<"start Test";
+        }
+    }else{
+        if(Control::CModBusManager::getInstance()->WriteBit(DEF_DEVTEST,1)){
+            CGLOBAL->getTools()->setdelaymTime(500);
+            m_Cmd = enum_Test_DevTest;
+            qDebug()<<"start Test";
+        }
     }
+
 }
 
 void CTestWidget::slt_editInfo()
@@ -62,7 +71,12 @@ void CTestWidget::slt_editInfo()
 void CTestWidget::slt_Readresult()
 {
     qDebug()<<"devtestended";
-    Control::CModBusManager::getInstance()->readData(1,1,300,50);
+    Control::CModBusManager::getInstance()->readData(1,1,300,150);
+}
+
+void CTestWidget::set_testModel(bool m_test)
+{
+    test_model=m_test;
 }
 
 void CTestWidget::on_mBtn_Edit_clicked()
@@ -400,15 +414,6 @@ void CTestWidget::on_mBtn_Diag_Save_clicked()
         //送检时间
         PatientInfo.Submitted=ctime;
         Control::CTestManager::getInstances()->setPatient1(PatientInfo);
-
-        Control::CTestManager::getInstances()->setPatient1(PatientInfo);
-        Control::CModBusManager::getInstance()->WriteData(DEF_R1R2TIME,60);
-        Control::CModBusManager::getInstance()->WriteData(DEF_R2R3TIME,60);
-        Control::CModBusManager::getInstance()->WriteData(DEF_PTIMEAT1,300);
-        Control::CModBusManager::getInstance()->WriteData(DEF_PTIMEAT2,300);
-        Control::CModBusManager::getInstance()->WriteData(DEF_PTIMEAT3,300);
-        Control::CModBusManager::getInstance()->WriteData(DEF_PTIMEAT4,300);
-        Control::CModBusManager::getInstance()->WriteData(DEF_PTIMEAT5,300);
         ui->Diag_mStacked->setCurrentIndex(0);
         ui->mBtn_Open->setEnabled(true);
 
@@ -419,20 +424,96 @@ void CTestWidget::on_mBtn_Diag_Save_clicked()
 
 void CTestWidget::on_mBtn_Open_clicked()
 {
-    if(Control::CModBusManager::getInstance()->WriteBit(DEF_PREACTION,1)){
-        qDebug()<<"preaction success";
+    ST_Order r_data = Control::CSetManager::getInstances()->get_order();
+    model = r_data.model;
+    qDebug()<<model;
+    QStringList firstinfo = r_data.t_order.at(0);
+    if(model==true){
+        QStringList secondinfo = r_data.t_order.at(1);
+        QString m_action = secondinfo.at(1);
+        QString m_liqiud = firstinfo.at(1);
+        QString d_liqiud1 = m_liqiud.split("-").at(0);
+        QString d_liqiud2 = m_liqiud.split("-").at(1);
+        QString d_liqiud3 = m_liqiud.split("-").at(2);
+        Control::CModBusManager::getInstance()->WriteData(250,0);
+        Control::CModBusManager::getInstance()->WriteData(251,d_liqiud1.toInt());
+        Control::CModBusManager::getInstance()->WriteData(252,d_liqiud2.toInt());
+        Control::CModBusManager::getInstance()->WriteData(253,d_liqiud3.toInt());
+        if(m_action=="0"){
+            Control::CModBusManager::getInstance()->WriteData(260,0);
+            r_data.n_order++;
+        }else if(m_action=="1"){
+            Control::CModBusManager::getInstance()->WriteData(260,1);
+            for(int i=0;i<15;i++){
+                QString p_info = secondinfo.at(i+2);
+                bool ok=true;
+                int d_info = p_info.toInt(&ok,16);
+                Control::CModBusManager::getInstance()->WriteData(261+i,d_info);//检测孔位置设置
+            }
+            r_data.n_order++;
+        }
+        Control::CSetManager::getInstances()->set_order(r_data);
+        Control::CModBusManager::getInstance()->WriteData(276,1);
+        Control::CModBusManager::getInstance()->WriteData(277,1);
         CGLOBAL->getTools()->setdelaymTime(500);
-        m_Cmd=enum_Test_PreAction;
+        if(Control::CModBusManager::getInstance()->WriteBit(DEF_PREACTION,1)){
+            qDebug()<<"preaction success";
+            CGLOBAL->getTools()->setdelaymTime(500);
+            m_Cmd=enum_Test_PreAction;
+        }
+    }else {
+        Control::CModBusManager::getInstance()->WriteData(250,1);
+        QString m_action = firstinfo.at(1);
+        if(m_action=="0"){
+            Control::CModBusManager::getInstance()->WriteData(240,0);
+            r_data.n_order++;
+        }else if(m_action=="1"){
+            Control::CModBusManager::getInstance()->WriteData(240,1);
+            for(int i=0;i<15;i++){
+                QString p_info = firstinfo.at(i+2);
+                bool ok=true;
+                int d_info = p_info.toInt(&ok,16);
+                Control::CModBusManager::getInstance()->WriteData(225+i,d_info);//注液孔位置设置
+            }
+            QString p_liqiud = firstinfo.at(17);
+            Control::CModBusManager::getInstance()->WriteData(241,p_liqiud.toInt());//是否注液设置
+            r_data.n_order++;
+        }else if(m_action=="2"){
+            Control::CModBusManager::getInstance()->WriteData(240,2);
+            for(int i=0;i<5;i++){
+                QString p_info = firstinfo.at(i+2);
+                bool ok=true;
+                int d_info = p_info.toInt(&ok,16);
+                Control::CModBusManager::getInstance()->WriteData(242+i,d_info);//检测孔位置设置
+            }
+            r_data.n_order++;
+        }
+        Control::CSetManager::getInstances()->set_order(r_data);
+        qDebug()<<r_data.n_order<<"mmmm";
+        Control::CModBusManager::getInstance()->WriteData(247,1);
+        Control::CModBusManager::getInstance()->WriteData(248,1);
+//        CGLOBAL->getTools()->setdelaymTime(500);
+        if(Control::CModBusManager::getInstance()->WriteBit(DEF_PREACTION,1)){
+            qDebug()<<"preaction1 success";
+            CGLOBAL->getTools()->setdelaymTime(1000);
+            m_Cmd=enum_Test_PreAction;
+        }
     }
+
 }
 
 void CTestWidget::slt_ReadModbusinfo(QStringList nstate)
 {
     QStringList m_Mstate = nstate;
     QString n_state = m_Mstate.at(0);
+    QString n_rtime = m_Mstate.at(2);//运行时间
+    QString n_nextcy = m_Mstate.at(47);//分步法下一周期
+    QString n_nextcy1 = m_Mstate.at(76);//一步法下一周期
+    QString n_cystate = m_Mstate.at(48);//分步法提取状态
+    QString n_cystate1 = m_Mstate.at(77);//一步法提取状态
     QString n_wasteLq = m_Mstate.at(14);
     QString n_flushLq = m_Mstate.at(15);
-//    qDebug()<<"state:"<<nstate<<m_Cmd;
+    qDebug()<<m_Cmd<<n_rtime<<n_nextcy<<n_cystate;
     if(m_Mstate.size()>0&&n_state=="0"){
         QString temp_in = m_Mstate.at(10);
         temp_in = QString::number(temp_in.toDouble()/10,'f',1);
@@ -471,6 +552,105 @@ void CTestWidget::slt_ReadModbusinfo(QStringList nstate)
     }else if(m_Cmd==enum_Test_Scan&&n_state=="0"){
         m_Cmd=enum_Test_Null;
         slt_editInfo();
+    }else if(m_Cmd==enum_Test_St&&n_state=="0"){
+        m_Cmd=enum_Test_Null;
+        slt_Readresult();
+    }else if(m_Cmd==enum_Test_St&&n_rtime.toInt()>44&&n_nextcy1.toInt()==0&&n_cystate1.toInt()==0){
+        ST_Order r_sdata = Control::CSetManager::getInstances()->get_order();
+        int num = r_sdata.n_order;
+        if(num==r_sdata.t_order.size()-1){
+            return;
+        }
+        QString n_type = r_sdata.order_type.at(num+1);
+        qDebug()<<n_type<<"xxxxxxxx";
+        if(n_type=="0"){
+            Control::CModBusManager::getInstance()->WriteData(260,0);//一步法静止动作
+            r_sdata.n_order=num+1;
+            Control::CSetManager::getInstances()->set_order(r_sdata);
+            if(num>=r_sdata.t_order.size()-2){
+                Control::CModBusManager::getInstance()->WriteData(276,0);
+            }else{
+                Control::CModBusManager::getInstance()->WriteData(276,1);
+            }
+            Control::CModBusManager::getInstance()->WriteData(277,1);//提取状态重置
+        }else if(n_type=="1"){
+            Control::CModBusManager::getInstance()->WriteData(260,1);//一步法检测动作
+            QStringList n_info = r_sdata.t_order.at(num+1);
+            for(int i=0;i<15;i++){
+                QString p_info = n_info.at(i+2);
+                bool ok=true;
+                int d_info = p_info.toInt(&ok,16);
+                if(Control::CModBusManager::getInstance()->WriteData(261+i,d_info))//检测孔位置设置
+                    qDebug()<<i<<d_info<<p_info<<"zzzzzzz";
+            }
+
+            r_sdata.n_order=num+1;
+            if(num>=r_sdata.t_order.size()-2){
+                Control::CModBusManager::getInstance()->WriteData(276,0);
+            }else{
+                Control::CModBusManager::getInstance()->WriteData(276,1);
+            }
+            Control::CSetManager::getInstances()->set_order(r_sdata);
+            Control::CModBusManager::getInstance()->WriteData(277,1);//提取状态重置
+            qDebug()<<n_rtime.toInt()<<"num"<<num;
+        }
+    }else if(m_Cmd==enum_Test_DevTest&&n_rtime.toInt()>44&&n_nextcy.toInt()==0&&n_cystate.toInt()==0){
+        ST_Order r_sdata = Control::CSetManager::getInstances()->get_order();
+        int num = r_sdata.n_order;
+        if(num==r_sdata.t_order.size()){
+            return;
+        }
+        QString n_type = r_sdata.order_type.at(num);
+        qDebug()<<n_type<<n_rtime.toInt();
+        if(n_type=="0"){
+            Control::CModBusManager::getInstance()->WriteData(240,0);//分步法静止动作
+            r_sdata.n_order=num+1;
+            Control::CSetManager::getInstances()->set_order(r_sdata);
+            if(num>=r_sdata.t_order.size()-1){
+                Control::CModBusManager::getInstance()->WriteData(247,0);
+            }else{
+                Control::CModBusManager::getInstance()->WriteData(247,1);
+            }
+            Control::CModBusManager::getInstance()->WriteData(248,1);//提取状态重置
+        }else if(n_type=="1"){
+            Control::CModBusManager::getInstance()->WriteData(240,1);//分步法检测动作
+            QStringList n_info = r_sdata.t_order.at(num);
+            for(int i=0;i<15;i++){
+                QString p_info = n_info.at(i+2);
+                bool ok=true;
+                int d_info = p_info.toInt(&ok,16);
+                if(Control::CModBusManager::getInstance()->WriteData(225+i,d_info))//检测孔位置设置
+                    qDebug()<<i<<d_info<<p_info<<"zzzzzzz";
+            }
+            QString p_liqiud = n_info.at(17);
+            Control::CModBusManager::getInstance()->WriteData(241,p_liqiud.toInt());//是否注液设置
+            r_sdata.n_order=num+1;
+            if(num>=r_sdata.t_order.size()-1){
+                Control::CModBusManager::getInstance()->WriteData(247,0);
+            }else{
+                Control::CModBusManager::getInstance()->WriteData(247,1);
+            }
+            Control::CSetManager::getInstances()->set_order(r_sdata);
+            Control::CModBusManager::getInstance()->WriteData(248,1);//提取状态重置
+        }else if(n_type=="2"){
+            Control::CModBusManager::getInstance()->WriteData(240,2);
+            QStringList n_info = r_sdata.t_order.at(num);
+            for(int i=0;i<5;i++){
+                QString p_info = n_info.at(i+2);
+                bool ok=true;
+                int d_info = p_info.toInt(&ok,16);
+                Control::CModBusManager::getInstance()->WriteData(242+i,d_info);//检测孔位置设置
+            }
+            r_sdata.n_order=num+1;
+            if(num>=r_sdata.t_order.size()-1){
+                Control::CModBusManager::getInstance()->WriteData(247,0);
+            }else{
+                Control::CModBusManager::getInstance()->WriteData(247,1);
+            }
+            Control::CSetManager::getInstances()->set_order(r_sdata);
+            Control::CModBusManager::getInstance()->WriteData(248,1);//提取状态重置
+        }
+
     }else if(m_Cmd==enum_Test_DevTest&&n_state=="0"){
         m_Cmd=enum_Test_Null;
         slt_Readresult();
@@ -491,14 +671,63 @@ void CTestWidget::slt_ReadData(QStringList nstate)
         BarcodeStr2 += Comom::CGlobal::getInstance()->getTools()->StrtoHex(nstate.at(i+10));
         BarcodeStr3 += Comom::CGlobal::getInstance()->getTools()->StrtoHex(nstate.at(i+20));
     }
-    qDebug()<<debug1<<"end";
     QStringList m_scan1 = BarcodeStr1.split("030d");
     BarcodeStr1 = m_scan1.at(0);
     BarcodeStr1 = BarcodeStr1.mid(2,BarcodeStr1.length()-2);
-    QString nNowBatch = Control::ChlcpeakManager::getInstance()->BarcodeToBatch(Comom::CGlobal::getInstance()->getTools()->HexStrToByteArray(BarcodeStr1).data());
-    qDebug()<<nNowBatch<<"ss";
+    QStringList m_scan2 = BarcodeStr2.split("030d");
+    BarcodeStr2 = m_scan2.at(0);
+    BarcodeStr2 = BarcodeStr2.mid(2,BarcodeStr2.length()-2);
+    QStringList m_scan3 = BarcodeStr3.split("030d");
+    BarcodeStr3 = m_scan3.at(0);
+    BarcodeStr3 = BarcodeStr3.mid(2,BarcodeStr3.length()-2);
+    QString nNowBatch1 = Control::ChlcpeakManager::getInstance()->BarcodeToBatch(Comom::CGlobal::getInstance()->getTools()->HexStrToByteArray(BarcodeStr1).data());
+    QString nNowBatch2 = Control::ChlcpeakManager::getInstance()->BarcodeToBatch(Comom::CGlobal::getInstance()->getTools()->HexStrToByteArray(BarcodeStr2).data());
+    QString nNowBatch3 = Control::ChlcpeakManager::getInstance()->BarcodeToBatch(Comom::CGlobal::getInstance()->getTools()->HexStrToByteArray(BarcodeStr3).data());
+    qDebug()<<nNowBatch1<<nNowBatch2<<nNowBatch3;
+    QString filename;
+    if(nNowBatch1.remove("H").toInt()!=0&&nNowBatch2.remove("H").toInt()!=0&&nNowBatch3.remove("H").toInt()!=0){
+        filename = "Ordertxt\\T7.csv";
+    }else if(nNowBatch1.remove("H").toInt()==0&&nNowBatch2.remove("H").toInt()!=0&&nNowBatch3.remove("H").toInt()!=0){
+        filename = "Ordertxt\\T6.csv";
+    }else if(nNowBatch1.remove("H").toInt()!=0&&nNowBatch2.remove("H").toInt()==0&&nNowBatch3.remove("H").toInt()!=0){
+        filename = "Ordertxt\\T5.csv";
+    }else if(nNowBatch1.remove("H").toInt()!=0&&nNowBatch2.remove("H").toInt()!=0&&nNowBatch3.remove("H").toInt()==0){
+        filename = "Ordertxt\\T4.csv";
+    }else if(nNowBatch1.remove("H").toInt()==0&&nNowBatch2.remove("H").toInt()==0&&nNowBatch3.remove("H").toInt()!=0){
+        filename = "Ordertxt\\T3.csv";
+    }else if(nNowBatch1.remove("H").toInt()==0&&nNowBatch2.remove("H").toInt()!=0&&nNowBatch3.remove("H").toInt()==0){
+        filename = "Ordertxt\\T2.csv";
+    }else if(nNowBatch1.remove("H").toInt()!=0&&nNowBatch2.remove("H").toInt()==0&&nNowBatch3.remove("H").toInt()==0){
+        filename = "Ordertxt\\T1.csv";
+    }
+    qDebug()<<"FILE:"<<filename;
+    if(test_model){
+        QFileInfo fi(filename);
+        if(fi.exists()){
+            QFile fl(fi.absoluteFilePath());
+            if(fl.open(QFile::ReadOnly)){
+                QTextStream *inf = new QTextStream(&fl);
+                QStringList f_data = inf->readAll().split("\n",QString::SkipEmptyParts);
+                ST_Order d_data1;
+                for(int i=0;i<f_data.length();i++){
+                    QStringList orderinfo = f_data.at(i).split(",");
+                    QString pred = f_data.at(0);
+                    d_data1.order_type<<orderinfo.at(1);
+                    d_data1.t_order<<orderinfo;
+                    d_data1.n_order=0;
+                    if(pred.indexOf(tr("前处理"))!=-1){
+                        d_data1.model=true;
+                    }else{
+                        d_data1.model=false;
+                    }
+                    Control::CSetManager::getInstances()->set_order(d_data1);
+                }
+            }
+        }
+    }
+
     ui->Diag_mStacked->setCurrentIndex(1);
-    ui->tabWidget_patient->setTabText(0,nNowBatch);
+    ui->tabWidget_patient->setTabText(0,nNowBatch1);
 
 
 }
@@ -506,21 +735,26 @@ void CTestWidget::slt_ReadData(QStringList nstate)
 void CTestWidget::slt_ShowData(QStringList nstate)
 {
     QStringList d_result;
-    for(int i=0;i<5;i++){
-        QString info = QString::number(Control::CTestManager::getInstances()->get_value(nstate.at(i*10+0),nstate.at(i*10+1))) +
-                            QString::number(Control::CTestManager::getInstances()->get_value(nstate.at(i*10+2),nstate.at(i*10+3))) +
-                            QString::number(Control::CTestManager::getInstances()->get_value(nstate.at(i*10+4),nstate.at(i*10+5))) +
-                            QString::number(Control::CTestManager::getInstances()->get_value(nstate.at(i*10+6),nstate.at(i*10+7))) +
-                            QString::number(Control::CTestManager::getInstances()->get_value(nstate.at(i*10+8),nstate.at(i*10+9)));
+    for(int i=0;i<15;i++){
+        QString info = QString::number(Control::CTestManager::getInstances()->get_value(nstate.at(i*10+0),nstate.at(i*10+1)) +
+                                       Control::CTestManager::getInstances()->get_value(nstate.at(i*10+2),nstate.at(i*10+3)) +
+                                       Control::CTestManager::getInstances()->get_value(nstate.at(i*10+4),nstate.at(i*10+5)) +
+                                       Control::CTestManager::getInstances()->get_value(nstate.at(i*10+6),nstate.at(i*10+7)) +
+                                       Control::CTestManager::getInstances()->get_value(nstate.at(i*10+8),nstate.at(i*10+9)));
+
         d_result<<info;
     }
     qDebug()<<"result:"<<d_result;
 
-    ui->mTable_Result->setItem(0,1,new QTableWidgetItem(d_result.at(0)));
-    ui->mTable_Result->setItem(0,2,new QTableWidgetItem(d_result.at(1)));
-    ui->mTable_Result->setItem(0,3,new QTableWidgetItem(d_result.at(2)));
-    ui->mTable_Result->setItem(0,4,new QTableWidgetItem(d_result.at(3)));
-    ui->mTable_Result->setItem(0,5,new QTableWidgetItem(d_result.at(4)));
+    for(int i=0;i<3;i++){
+        ui->mTable_Result->setItem(i,0,new QTableWidgetItem(QString("盘%0").arg(i)));
+        ui->mTable_Result->setItem(i,1,new QTableWidgetItem(d_result.at(i*5)));
+        ui->mTable_Result->setItem(i,2,new QTableWidgetItem(d_result.at(i*5+1)));
+        ui->mTable_Result->setItem(i,3,new QTableWidgetItem(d_result.at(i*5+2)));
+        ui->mTable_Result->setItem(i,4,new QTableWidgetItem(d_result.at(i*5+3)));
+        ui->mTable_Result->setItem(i,5,new QTableWidgetItem(d_result.at(i*5+4)));
+    }
+
 
 }
 

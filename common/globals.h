@@ -48,6 +48,8 @@ typedef struct Order
 {
     QList<QString> order_type;
     QList<QStringList> t_order;
+    int n_order;
+    bool model;
 }ST_Order;
 
 typedef struct ItemQ{

@@ -66,6 +66,7 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(m_cpowerwidget,&CPowerWidget::sgn_CancelPower,this,&MainWindow::slt_Power);
 //    QObject::connect(CMgrMsgRouter::getInstances(),&CMgrMsgRouter::sgn_M_DatatoMain,this,&MainWindow::slt_M_DatatoMain);
     QObject::connect(m_ctestWidget,&CTestWidget::sgn_selfcheck,this,&MainWindow::slt_DevInit);
+    QObject::connect(m_csetWidget,&CSetWidget::sgn_Autotest,this,&MainWindow::slt_Autotest);
 
 }
 
@@ -316,7 +317,12 @@ void MainWindow::slt_DevInit()
         ui->stackedWidget->setCurrentIndex(0);
         ui->mBtn_Test->setChecked(true);
         m_cinitWidget->set_Open();
-//    }
+        //    }
+}
+
+void MainWindow::slt_Autotest(bool m_model)
+{
+    m_ctestWidget->set_testModel(m_model);
 }
 
 //设置按键状态

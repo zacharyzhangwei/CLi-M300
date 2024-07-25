@@ -23,8 +23,11 @@ enum  EM_Bit_IDX
     DEF_INIT=203,    //初始化开关
     DEF_PUSHAIR=204,     //排气开关
     DEF_SCAN=205,   //扫码开关
-    DEF_PREACTION=220, //前处理开关
-    DEF_DEVTEST=221,  //测试执行开关
+    DEF_CLEANTP=206,//洗针
+    DEF_CLEANSHOT=207,//清洗镜头
+    DEF_PREACTION=230, //前处理开关
+    DEF_DEVTEST=231,  //单周期开关分步法
+    DEF_STEST=232, //单周期开关一步法
 };
 
 //数据枚举
@@ -46,13 +49,7 @@ enum  EM_DATA_IDX
     DEF_DEVILLIQUOR=214,
     DEF_BUFFER=215,
     DEF_RFCARD=216,
-    DEF_R1R2TIME=220,
-    DEF_R2R3TIME=221,
-    DEF_PTIMEAT1=222,
-    DEF_PTIMEAT2=223,
-    DEF_PTIMEAT3=224,
-    DEF_PTIMEAT4=225,
-    DEF_PTIMEAT5=226,
+
 
  };
 

@@ -47,7 +47,8 @@ enum enum_Test_Cmd
     enum_Test_PushAir,//排液
     enum_Test_Scan,//扫码
     enum_Test_PreAction,//前处理（离心）
-    enum_Test_DevTest,//孵育测试
+    enum_Test_DevTest,//分步法测试
+    enum_Test_St,//一步法测试
 };
 
 

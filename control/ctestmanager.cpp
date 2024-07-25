@@ -24,7 +24,7 @@ namespace Control
 
     int CTestManager::get_value(QString dataHigh, QString dataLow)
     {
-        int data=dataHigh.toInt()<<16;
+        int data=dataHigh.toInt()*65535;
         data=data+dataLow.toInt();
         return data;
     }

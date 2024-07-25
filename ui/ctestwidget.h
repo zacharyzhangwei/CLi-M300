@@ -9,6 +9,7 @@
 #include "control/ctestmanager.h"
 #include "control/cdbmanager.h"
 #include "control/cmodbusmanager.h"
+#include "control/csetmanager.h"
 
 namespace Ui {
 class CTestWidget;
@@ -26,6 +27,7 @@ public:
     void slt_startTest();
     void slt_editInfo();
     void slt_Readresult();
+    void set_testModel(bool m_test);
 
 private slots:
     void on_mBtn_Edit_clicked();
@@ -79,6 +81,8 @@ private:
     void setTableScroller(QTableWidget *nTable);//设置类安卓滑动
     void init_Operator_table();
     int m_nowDialogNum;
+    bool model;
+    bool test_model=true;
 
 
 signals:

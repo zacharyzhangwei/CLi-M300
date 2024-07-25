@@ -61,6 +61,7 @@ private slots:
     void slt_groupMain(int i);
     void slt_M_DatatoMain(int dataType,QStringList nData);
     void slt_DevInit();
+    void slt_Autotest(bool m_model);
 
 
 

@@ -155,11 +155,11 @@ int main(int argc, char *argv[])
     qApp->installTranslator(translator);
 
     MainWindow w;
-    w.setWindowTitle("FLI-1200");
-    if(Control::CConfgManager::getInstance()->getWindowInfo()==1)
+    w.setWindowTitle("CLi-M300");
+    //if(Control::CConfgManager::getInstance()->getWindowInfo()==1)
         w.show();//showFullScreen
-    else
-        w.showFullScreen();//showFullScreen
+//    else
+//        w.showFullScreen();//showFullScreen
 
     return a.exec();
 }
